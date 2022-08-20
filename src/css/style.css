@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+/*
+  0 - 600px:        Phone
+  600 - 900px:      Tablet portrait
+  900 - 1200px:     Tablet landscape
+  1200 - 1800px:    Normal styles
+  1800px +          Big desktop
+
+  1em = 16px
+
+  0 - 37.5em:       Phone
+  37.5 - 56.25em:   Tablet portrait
+  56.25 - 75em:     Tablet landscape
+  75em - 112.5em:   Normal styles
+  112.5em +         Big desktop 
+
+
+  $breakpoint argument choices:target
+  - phone
+  - tab-port
+  - tab-land
+  - big-desktop
+*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  font-weight: 400;
+  line-height: 1.6; }
+
+.container {
+  display: grid;
+  grid-template-rows: 99vh repeat(5, min-content);
+  grid-template-columns: 1fr; }
+
+::selection {
+  background-color: #d6a283;
+  color: #fff; }
+
+.header {
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  gap: 2rem;
+  align-content: center;
+  justify-self: center;
+  text-align: center; }
+  .header__title {
+    font-size: 6rem; }
+  .header__subtitle {
+    font-size: 4rem; }
