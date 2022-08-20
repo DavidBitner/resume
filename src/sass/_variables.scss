@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
 // Colors
 $color-primary: #d6a283;
 $color-primary-light: #e3bea9;
@@ -14,7 +16,7 @@ $color-white-transparent: rgba(255, 255, 255, 0.085);
 $color-black: #000;
 
 // Font
-$font-primary: "Montserrat", sans-serif;
+$font-primary: "Roboto", sans-serif;
 
 // Shadows
 $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
