@@ -71,3 +71,17 @@ body {
     font-size: 6rem; }
   .header__subtitle {
     font-size: 4rem; }
+
+.footer {
+  display: grid;
+  background-color: black;
+  color: white;
+  justify-items: center;
+  font-size: 2rem;
+  padding: 5rem;
+  transition: all 0.2s; }
+  .footer__link {
+    text-decoration: none;
+    color: white; }
+    .footer__link:hover {
+      color: green; }

@@ -1,0 +1,18 @@
+.footer {
+  display: grid;
+  background-color: black;
+  color: white;
+  justify-items: center;
+  font-size: 2rem;
+  padding: 5rem;
+  transition: all 0.2s;
+
+  &__link {
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      color: green;
+    }
+  }
+}
