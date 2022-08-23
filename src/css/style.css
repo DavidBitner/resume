@@ -21,6 +21,25 @@
   - tab-land
   - big-desktop
 */
+.title {
+  font-size: 2rem;
+  padding: 4rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-bottom: 1rem;
+  background: linear-gradient(100deg, #000000, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 7s ease infinite; }
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 31% 0%; }
+  50% {
+    background-position: 70% 100%; }
+  100% {
+    background-position: 31% 0%; } }
+
 *,
 *::before,
 *::after {

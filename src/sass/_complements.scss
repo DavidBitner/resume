@@ -1,0 +1,13 @@
+.title {
+  font-size: 2rem;
+  padding: 4rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin-bottom: 1rem;
+
+  background: linear-gradient(100deg, #000000, #ffffff);
+  background-size: 400% 400%;
+
+  animation: gradientAnimation 7s ease infinite;
+}
