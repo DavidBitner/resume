@@ -91,6 +91,46 @@ body {
   .header__subtitle {
     font-size: 4rem; }
 
+.projects__grid {
+  display: grid;
+  padding: 4rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem; }
+
+.project {
+  background-color: black;
+  padding: 4rem;
+  height: 20rem;
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px; }
+  .project__text {
+    z-index: 1; }
+  .project__img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0;
+    transition: opacity 500ms ease 0s;
+    border-radius: 10px; }
+  .project:hover img {
+    opacity: 40%; }
+
 .footer {
   display: grid;
   background-color: black;
