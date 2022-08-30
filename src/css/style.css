@@ -95,7 +95,8 @@ body {
   display: grid;
   padding: 4rem;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem; }
+  gap: 1rem;
+  font-size: 2rem; }
 
 .project {
   background-color: black;
@@ -114,7 +115,7 @@ body {
   background-image: none;
   cursor: pointer;
   position: relative;
-  border-radius: 10px; }
+  border-radius: 0.5rem; }
   .project__text {
     z-index: 1; }
   .project__img {
@@ -127,9 +128,33 @@ body {
     object-position: center center;
     opacity: 0;
     transition: opacity 500ms ease 0s;
-    border-radius: 10px; }
+    border-radius: 0.5rem; }
   .project:hover img {
     opacity: 40%; }
+
+.list {
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 4rem;
+  list-style-type: none; }
+  .list__item {
+    border: 1px solid rgba(0, 0, 0, 0.104); }
+    .list__item--progress {
+      box-sizing: border-box;
+      transition: all 0.5s;
+      display: grid;
+      align-content: center;
+      background: lightgreen;
+      width: 0;
+      height: 50px; }
+      .list__item--progress-text {
+        padding-left: 2rem; }
+    .list__item:hover .list__item--progress {
+      letter-spacing: 1px;
+      font-weight: bold;
+      width: 60%; }
 
 .footer {
   display: grid;
@@ -137,7 +162,7 @@ body {
   color: white;
   justify-items: center;
   font-size: 2rem;
-  padding: 5rem;
+  padding: 6rem;
   transition: all 0.2s; }
   .footer__link {
     text-decoration: none;
