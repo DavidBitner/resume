@@ -1,13 +1,14 @@
 .projects__grid {
   display: grid;
-  padding: 4rem;
+  padding: $padding-size;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+  font-size: $font-normal;
 }
 
 .project {
   background-color: black;
-  padding: 4rem;
+  padding: $padding-size;
   height: 20rem;
   color: white;
   display: grid;
@@ -22,7 +23,7 @@
   background-image: none;
   cursor: pointer;
   position: relative;
-  border-radius: 10px;
+  border-radius: $border-radius;
 
   &__text {
     z-index: 1;
@@ -38,7 +39,7 @@
     object-position: center center;
     opacity: 0;
     transition: opacity 500ms ease 0s;
-    border-radius: 10px;
+    border-radius: $border-radius;
   }
 
   &:hover {
