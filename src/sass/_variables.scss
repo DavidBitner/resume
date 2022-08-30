@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
 // Colors
 $color-primary: #d6a283;
@@ -18,17 +18,19 @@ $color-black: #000;
 // Font
 $font-primary: "Roboto", sans-serif;
 
+$font-small: 1.5rem;
+$font-normal: 2rem;
+$font-big: 2.5rem;
+
 // Shadows
 $shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
 $shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
 
 // Grid
-$gap-small: 1rem;
-$gap-medium: 3rem;
-$gap-large: 5rem;
+$gap: 2rem;
 
-$padding-size: 10rem 3rem;
-$padding-small: 5rem 3rem;
-$padding-big: 15rem 3rem;
+$padding-size: 4rem;
+$padding-small: 2rem;
+$padding-big: 6rem;
 
 $border-radius: 0.5rem;
