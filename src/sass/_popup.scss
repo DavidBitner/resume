@@ -1,0 +1,21 @@
+.overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000dd;
+  position: fixed;
+  color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.popup {
+  display: grid;
+  max-width: 80vw;
+  background-color: white;
+  transform: scale(0.8);
+  transition: all .2s ease-in-out;
+  opacity: 0;
+}
