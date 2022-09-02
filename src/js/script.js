@@ -26,13 +26,39 @@ class UI {
     }
   }
 
-  static openPopup() {}
+  static openPopup(projectId) {
+    if (!projectId.includes("project")) {
+      return;
+    }
+
+    const popup = document.querySelector(`.popup`);
+
+    document.querySelector(`.overlay`).style.visibility = "visible";
+    popup.style.transform = "scale(1)";
+    popup.style.opacity = "1";
+  }
+
+  static closePopup() {
+    const popup = document.querySelector(`.popup`);
+
+    document.querySelector(`.overlay`).style.visibility = "hidden";
+    popup.style.transform = "scale(0.8)";
+    popup.style.opacity = "0";
+  }
 }
 
 document.querySelector(".projects").addEventListener("mouseover", (e) => {
   UI.changeBackground(e.target.parentElement.id);
 });
 
-document.querySelector(".projects").addEventListener("click", (e) => {
+document.querySelector(".projects").addEventListener("mouseleave", (e) => {
+  UI.resetBackground(e.target.parentElement.id);
+});
+
+window.addEventListener("click", (e) => {
   UI.openPopup(e.target.parentElement.id);
+
+  if (e.target == document.querySelector(`.overlay`)) {
+    UI.closePopup();
+  }
 });
