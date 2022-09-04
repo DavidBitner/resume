@@ -1,7 +1,7 @@
 .footer {
   display: grid;
-  background-color: black;
-  color: white;
+  background-color: $color-black;
+  color: $color-white;
   justify-items: center;
   font-size: 2rem;
   padding: $padding-big;
@@ -9,10 +9,10 @@
 
   &__link {
     text-decoration: none;
-    color: white;
+    color: $color-white;
 
     &:hover {
-      color: green;
+      color: $color-primary;
     }
   }
 }

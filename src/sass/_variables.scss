@@ -12,8 +12,11 @@ $color-gray-dark-1: #999;
 $color-gray-dark-2: #333;
 
 $color-white: #fff;
-$color-white-transparent: rgba(255, 255, 255, 0.085);
+$color-white-transparent: rgba(255, 255, 255, 0.18);
 $color-black: #000;
+$color-black-transparent: rgba(0, 0, 0, 0.95);
+
+$color-green: #90ee90;
 
 // Font
 $font-primary: "Roboto", sans-serif;
@@ -34,3 +37,4 @@ $padding-small: 2rem;
 $padding-big: 6rem;
 
 $border-radius: 0.5rem;
+$border-radius-big: 2rem;
