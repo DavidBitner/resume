@@ -22,7 +22,7 @@ class UI {
       background.style.backgroundColor = "#000533";
     }
     if (projectId == "project6") {
-      background.style.backgroundColor = "#000000";
+      background.style.backgroundColor = "#212121";
     }
   }
 
@@ -34,16 +34,18 @@ class UI {
     const popup = document.querySelector(`.popup`);
 
     document.querySelector(`.overlay`).style.visibility = "visible";
-    popup.style.transform = "scale(1)";
-    popup.style.opacity = "1";
+    document.querySelector(`.overlay`).style.opacity = "1";
+    popup.style.transform = "translateY(0)";
   }
 
   static closePopup() {
     const popup = document.querySelector(`.popup`);
+    const overlay = document.querySelector(`.overlay`);
 
-    document.querySelector(`.overlay`).style.visibility = "hidden";
-    popup.style.transform = "scale(0.8)";
-    popup.style.opacity = "0";
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = "0";
+    popup.style.transform = "translateY(50rem)";
+    popup.scrollTop = 0;
   }
 }
 

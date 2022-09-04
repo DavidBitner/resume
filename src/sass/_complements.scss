@@ -2,12 +2,16 @@
   font-size: $font-normal;
   padding: $padding-size;
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: $color-black;
+  color: $color-white;
   margin-bottom: 1rem;
 
-  background: linear-gradient(100deg, #000000, #ffffff);
+  background: linear-gradient(100deg, $color-black, $color-white);
   background-size: 400% 400%;
 
   animation: gradientAnimation 7s ease infinite;
+}
+
+.separator {
+  border-bottom: 1px solid $color-white-transparent;
 }
