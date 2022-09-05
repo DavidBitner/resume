@@ -1,3 +1,14 @@
+const project1 = {
+  title: "placeholder",
+  subtitle: "",
+  icon: "",
+  technologies: [],
+  imgs: [],
+  text: "",
+};
+
+class ProjectsData {}
+
 class UI {
   static changeBackground(projectId) {
     if (!projectId.includes("project")) {
