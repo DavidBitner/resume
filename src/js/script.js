@@ -37,6 +37,10 @@ class UI {
     }
   }
 
+  static resetBackground() {
+    document.querySelector(`body`).style.backgroundColor = "white";
+  }
+
   static openPopup(projectId) {
     if (!projectId.includes("project")) {
       return;
