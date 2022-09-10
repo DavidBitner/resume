@@ -1,0 +1,41 @@
+#overlay-modal {
+  align-content: center;
+  justify-content: center;
+}
+
+.modal {
+  transform: scale(0.8);
+  display: grid;
+  z-index: 3;
+  transition: all 0.2s ease-in-out;
+  background-color: $color-black;
+  margin: 4rem;
+  text-align: center;
+  gap: $gap;
+  min-width: 70vw;
+  padding: $padding-size;
+  font-size: 2rem;
+  box-shadow: $shadow-white;
+  border-radius: $border-radius-big;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__project {
+    background-color: #7b7b7b;
+    height: 10rem;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: $shadow-white;
+    transition: all 0.2s;
+    border-radius: $border-radius;
+
+    &:hover {
+      box-shadow: $shadow-white-big;
+      transform: scale(1.1);
+    }
+  }
+}

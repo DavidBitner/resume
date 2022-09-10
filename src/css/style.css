@@ -22,7 +22,7 @@
   - big-desktop
 */
 .title {
-  font-size: 4rem;
+  font-size: 2.5rem;
   padding: 4rem;
   text-align: center;
   background-color: #000;
@@ -41,13 +41,11 @@
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
-  font-weight: 400;
   line-height: 1;
-  padding: 4rem;
+  padding: 2rem;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  grid-column: 2/3;
   border-color: #d6a283;
   color: #fff;
   box-shadow: 0 0 40px 40px #d6a283 inset, 0 0 0 0 #d6a283;
@@ -95,7 +93,9 @@ body {
   color: #000;
   font-weight: 400;
   line-height: 1.6;
-  transition: background 1s; }
+  transition: background 1s;
+  background-color: #7d7d7d;
+  color: #fff; }
 
 .container {
   display: grid;
@@ -124,22 +124,16 @@ body {
   font-size: 2rem;
   padding: 4rem; }
 
-.projects__btn {
-  grid-column: 2/3;
-  height: 8rem;
-  width: 15rem;
-  margin-top: 4rem;
-  justify-self: center;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  cursor: pointer; }
-
 .projects__grid {
   display: grid;
   padding: 4rem;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   font-size: 2rem; }
+
+.projects__btn {
+  padding: 4rem;
+  grid-column: 2/3; }
 
 .project {
   background-color: #000;
@@ -236,13 +230,11 @@ body {
   margin-top: 10rem;
   background-color: #000;
   transition: all 0.2s ease-in-out;
-  box-shadow: 0px 0px 10px #333;
-  border-radius: 10px 10px 0 0;
+  box-shadow: 0px -4px 10px #333;
   padding: 4rem;
   gap: 2rem;
-  overflow-y: scroll;
   overflow-x: hidden;
-  transform: translateY(50rem); }
+  transform: translateY(100rem); }
   .popup__header {
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -277,3 +269,37 @@ body {
     height: 40rem;
     width: 60rem;
     border-radius: 2rem; }
+
+#overlay-modal {
+  align-content: center;
+  justify-content: center; }
+
+.modal {
+  transform: scale(0.8);
+  display: grid;
+  z-index: 3;
+  transition: all 0.2s ease-in-out;
+  background-color: #000;
+  margin: 4rem;
+  text-align: center;
+  gap: 2rem;
+  min-width: 70vw;
+  padding: 4rem;
+  font-size: 2rem;
+  box-shadow: 0 0 10px #333;
+  border-radius: 2rem; }
+  .modal__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+  .modal__project {
+    background-color: #7b7b7b;
+    height: 10rem;
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px #333;
+    transition: all 0.2s;
+    border-radius: 0.5rem; }
+    .modal__project:hover {
+      box-shadow: 0 0 20px #333;
+      transform: scale(1.1); }

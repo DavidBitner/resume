@@ -1,21 +1,15 @@
 .projects {
-  &__btn {
-    grid-column: 2/3;
-    height: 8rem;
-    width: 15rem;
-    margin-top: 4rem;
-    justify-self: center;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-
   &__grid {
     display: grid;
     padding: $padding-size;
     grid-template-columns: repeat(3, 1fr);
     gap: $gap;
     font-size: $font-normal;
+  }
+
+  &__btn {
+    padding: $padding-size;
+    grid-column: 2/3;
   }
 }
 
