@@ -22,7 +22,7 @@
   - big-desktop
 */
 .title {
-  font-size: 2rem;
+  font-size: 4rem;
   padding: 4rem;
   text-align: center;
   background-color: #000;
@@ -117,6 +117,12 @@ body {
     font-size: 6rem; }
   .header__subtitle {
     font-size: 4rem; }
+
+.about__grid {
+  display: grid;
+  gap: 2rem;
+  font-size: 2rem;
+  padding: 4rem; }
 
 .projects__btn {
   grid-column: 2/3;

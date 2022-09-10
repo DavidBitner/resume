@@ -1,0 +1,8 @@
+.about {
+  &__grid {
+    display: grid;
+    gap: $gap;
+    font-size: 2rem;
+    padding: $padding-size;
+  }
+}
