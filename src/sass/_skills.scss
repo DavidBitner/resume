@@ -5,6 +5,7 @@
   gap: $gap;
   padding: $padding-size;
   list-style-type: none;
+  color: $color-black;
 
   &__item {
     border: 1px solid $color-black-transparent;

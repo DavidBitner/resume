@@ -166,8 +166,11 @@ body {
     opacity: 0;
     transition: opacity 500ms ease 0s;
     border-radius: 0.5rem; }
-  .project:hover img {
-    opacity: 40%; }
+  .project:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px #d6a283; }
+    .project:hover img {
+      opacity: 40%; }
 
 .list {
   font-size: 2rem;
@@ -175,7 +178,8 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   padding: 4rem;
-  list-style-type: none; }
+  list-style-type: none;
+  color: #000; }
   .list__item {
     border: 1px solid rgba(0, 0, 0, 0.95);
     background-color: #fff; }
