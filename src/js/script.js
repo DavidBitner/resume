@@ -20,13 +20,13 @@ class UI {
     body.style.color = "white";
 
     if (projectId == "project1") {
-      body.style.backgroundColor = "#008f11";
+      body.style.backgroundColor = "#195020";
     }
     if (projectId == "project2") {
-      body.style.backgroundColor = "#d6a283";
+      body.style.backgroundColor = "#714f3b";
     }
     if (projectId == "project3") {
-      body.style.backgroundColor = "#e2aada";
+      body.style.backgroundColor = "#886a84";
     }
     if (projectId == "project4") {
       body.style.backgroundColor = "#606060";
