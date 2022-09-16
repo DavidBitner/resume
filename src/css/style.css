@@ -28,9 +28,9 @@
   background-color: #000;
   color: #fff;
   margin-bottom: 1rem;
-  background: linear-gradient(100deg, #000, #fff);
-  background-size: 400% 400%;
-  animation: gradientAnimation 7s ease infinite; }
+  line-height: 12rem;
+  background-color: black;
+  background-size: 400% 400%; }
 
 .separator {
   border-bottom: 1px solid rgba(255, 255, 255, 0.18); }
@@ -55,14 +55,6 @@
     color: #fff;
     outline: 0;
     box-shadow: 0 0 10px 0 #d6a283 inset, 0 0 10px 4px #d6a283; }
-
-@keyframes gradientAnimation {
-  0% {
-    background-position: 31% 0%; }
-  50% {
-    background-position: 70% 100%; }
-  100% {
-    background-position: 31% 0%; } }
 
 @keyframes backgroundHeaderAnimation {
   0% {
