@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bitner</title>
     <link rel="stylesheet" href="src/css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+    ></script>
     <script defer type="module" src="src/js/script.js"></script>
   </head>
   <body>
@@ -17,8 +21,10 @@
           <h2 class="header__subtitle">Interactive Resumé</h2>
         </div>
       </header>
-      <section class="projects" id="">
-        <div class="title">My Projects</div>
+      <section class="projects">
+        <div id="title1" class="title">
+          <div class="title__text">My Projects</div>
+        </div>
         <div class="projects__grid">
           <div class="project" id="project1">
             <div class="project__text">30 projects</div>
@@ -80,7 +86,9 @@
         </div>
       </section>
       <section class="about">
-        <div class="title message">About me</div>
+        <div id="title2" class="title">
+          <div class="title__text">About me</div>
+        </div>
         <div class="about__grid">
           <div class="about__paragraph">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque esse
@@ -123,10 +131,14 @@
         </div>
       </section>
       <section class="education">
-        <div class="title">Education</div>
+        <div id="title3" class="title">
+          <div class="title__text">Education</div>
+        </div>
       </section>
       <section class="skills">
-        <div class="title">Skills</div>
+        <div id="title4" class="title">
+          <div class="title__text">Skills</div>
+        </div>
         <ul class="list">
           <li class="list__item">
             <div class="list__item--progress">

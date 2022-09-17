@@ -85,15 +85,15 @@ class UI {
     overlay.style.opacity = "0";
     modal.style.transform = "scale(0.8)";
   }
+
+  static loadTitles() {
+    for (let i = 1; i <= 4; i++) {
+      particlesJS.load(`title${i}`, "src/js/particles.json", function () {});
+    }
+  }
 }
 
-document.querySelector(".projects").addEventListener("mouseover", (e) => {
-  UI.changeBackground(e.target.parentElement.id);
-});
-
-document.querySelector(".projects").addEventListener("mouseleave", (e) => {
-  UI.resetBackground(e.target.parentElement.id);
-});
+window.addEventListener("load", UI.loadTitles);
 
 window.addEventListener("click", (e) => {
   UI.openPopup(e.target.parentElement.id);
@@ -105,6 +105,14 @@ window.addEventListener("click", (e) => {
   if (e.target == document.querySelector(`#overlay-modal`)) {
     UI.closeModal();
   }
+});
+
+document.querySelector(".projects").addEventListener("mouseover", (e) => {
+  UI.changeBackground(e.target.parentElement.id);
+});
+
+document.querySelector(".projects").addEventListener("mouseleave", (e) => {
+  UI.resetBackground(e.target.parentElement.id);
 });
 
 document
