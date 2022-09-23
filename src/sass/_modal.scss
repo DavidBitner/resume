@@ -21,21 +21,40 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: $gap;
   }
 
   &__project {
     background-color: #7b7b7b;
-    height: 10rem;
+    height: 15rem;
     display: grid;
     align-items: center;
     cursor: pointer;
     box-shadow: $shadow-white;
     transition: all 0.2s;
     border-radius: $border-radius;
+    text-decoration: none;
+    color: white;
 
     &:hover {
       box-shadow: $shadow-white-big;
       transform: scale(1.1);
     }
   }
+}
+
+#other1 {
+  @include backgroundProject("../img/projects/bcc.png");
+}
+#other2 {
+  @include backgroundProject("../img/projects/quizApp.png");
+}
+#other3 {
+  @include backgroundProject("../img/projects/sliders.png");
+}
+#other4 {
+  @include backgroundProject("../img/projects/list.png");
+}
+#other5 {
+  @include backgroundProject("../img/projects/despertador.png");
 }

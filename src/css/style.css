@@ -317,16 +317,49 @@ body {
   border-radius: 2rem; }
   .modal__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem; }
   .modal__project {
     background-color: #7b7b7b;
-    height: 10rem;
+    height: 15rem;
     display: grid;
     align-items: center;
     cursor: pointer;
     box-shadow: 0 0 10px #333;
     transition: all 0.2s;
-    border-radius: 0.5rem; }
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: white; }
     .modal__project:hover {
       box-shadow: 0 0 20px #333;
       transform: scale(1.1); }
+
+#other1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/bcc.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#other2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/quizApp.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#other3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/sliders.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#other4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/list.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#other5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/despertador.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
