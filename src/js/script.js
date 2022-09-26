@@ -1,13 +1,4 @@
-const project1 = {
-  title: "placeholder",
-  subtitle: "",
-  icon: "",
-  technologies: [],
-  imgs: [],
-  text: "",
-};
-
-class ProjectsData {}
+import { projects } from "./data.js";
 
 class UI {
   static changeBackground(projectId) {
@@ -91,6 +82,11 @@ class UI {
       particlesJS.load(`title${i}`, "src/js/particles.json", function () {});
     }
   }
+
+  static loadProject(project) {
+    const projectIcon = document.querySelector(`.popup__icon`);
+    projectIcon.style.backgroundImage = `url("${project.icon}")`;
+  }
 }
 
 window.addEventListener("load", UI.loadTitles);
@@ -118,3 +114,7 @@ document.querySelector(".projects").addEventListener("mouseleave", (e) => {
 document
   .querySelector(`#btn-more-projects`)
   .addEventListener("click", UI.openModal);
+
+function createProject(title, img) {
+  const grid = document.querySelector(`.modal__grid`);
+}
