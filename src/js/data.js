@@ -2,7 +2,7 @@ const projects = {
   project1: {
     title: "30 projects",
     subtitle: "A big project involving multiple concepts and technologies.",
-    icon: "src/img/projects/30projectsIcon.png",
+    icon: "30projectsIcon.png",
     highlights: ["API's", "Custom Canvas", "JavaScript modules"],
     imgs: [
       "30projects1.png",
@@ -25,7 +25,7 @@ const projects = {
   project2: {
     title: "Landings Page",
     subtitle: "A landing page.",
-    icon: "../img/projects/landingsPageIcon.png",
+    icon: "landingsPageIcon.png",
     highlights: [
       "Landing Page",
       "Splide Carousel",
@@ -46,7 +46,7 @@ const projects = {
   project3: {
     title: "Auto Blog",
     subtitle: "A blog that generates random posts.",
-    icon: "../img/projects/autoBlogIcon.png",
+    icon: "autoBlogIcon.png",
     highlights: ["Blog", "API", "Loading info"],
     imgs: ["autoBlog1.png", "autoBlog2.png", "autoBlog3.png"],
     text: "This is a website that uses the newscather api to generate news based on a topic, with the information from the api a blog post is automatically generated. The website is 100% responsive and buttons have a ripple effect animation created in CSS and JS. Posts also have a loading state while the api is working in the background, just to make sure the user don't get confused and thinks nothing is happening.",
@@ -55,7 +55,7 @@ const projects = {
   project4: {
     title: "Crud",
     subtitle: "A crud website created using JavaScript classes.",
-    icon: "../img/projects/crudIcon.png",
+    icon: "crudIcon.png",
     highlights: ["JS Classes", "CRUD"],
     imgs: ["crud1.png", "crud2.png", "crud3.png"],
     text: "An application with cards, these cards can be visualized, can be created, updated and deleted. Information inside the cards can also be manipulated. Application have a grid based layout and is 100% responsive. A modal is oppened every time a card demands to be created, changed or deleted. Local storage is used so no information is lost when the application is closed.",
@@ -65,7 +65,7 @@ const projects = {
     title: "Shapes Colors",
     subtitle:
       "A website created specifically to learn how container manipulation, mouse position and keyboard keys events work.",
-    icon: "../img/projects/shapesColorsIcon.png",
+    icon: "shapesColorsIcon.png",
     highlights: ["Mouse Position", "Keyboard Options"],
     imgs: [
       "shapesColors1.png",
@@ -80,7 +80,7 @@ const projects = {
   project6: {
     title: "Timers",
     subtitle: "An application with multiple timers.",
-    icon: "../img/projects/timersIcon.png",
+    icon: "timersIcon.png",
     highlights: ["Set Interval", "Modal", "Grid Responsivenes"],
     imgs: ["timers1.png", "timers2.png", "timers3.png"],
     text: "Multiple timers in a responsive grid. Timers can be added, removed, reset and changed based on the options available inside a modal. Timers also have a progress bar based on how much time is left until the timer ends. Also a sound is played every time a timer ends.",
