@@ -56,7 +56,8 @@
   color: #fff;
   box-shadow: 0 0 40px 40px #d6a283 inset, 0 0 0 0 #d6a283;
   transition: all 150ms ease-in-out;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  text-decoration: none; }
   .btn:hover, .btn:focus {
     color: #fff;
     outline: 0;
@@ -272,12 +273,11 @@ body {
   .popup__icon {
     height: 8rem;
     width: 8rem;
-    background-color: #fff;
+    background-color: #333;
     border-radius: 2px;
     grid-row: 1/3;
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+    background-repeat: no-repeat; }
   .popup__title {
     font-size: 2rem; }
   .popup__subtitle {
@@ -292,13 +292,19 @@ body {
     border-radius: 0.5rem; }
   .popup__imgs {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem; }
+    grid-auto-flow: column;
+    gap: 2rem;
+    cursor: grab; }
   .popup__img {
-    background-color: white;
+    background-color: #333;
     height: 40rem;
     width: 60rem;
-    border-radius: 2rem; }
+    border-radius: 2rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2rem;
+    background-origin: content-box; }
 
 #overlay-modal {
   align-content: center;
