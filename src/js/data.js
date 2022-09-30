@@ -58,7 +58,7 @@ const projects = {
     icon: "crudIcon.png",
     highlights: ["JS Classes", "CRUD"],
     imgs: ["crud1.png", "crud2.png", "crud3.png"],
-    text: "An application with cards, these cards can be visualized, can be created, updated and deleted. Information inside the cards can also be manipulated. Application have a grid based layout and is 100% responsive. A modal is oppened every time a card demands to be created, changed or deleted. Local storage is used so no information is lost when the application is closed.",
+    text: "An application with cards, these cards can be visualized, can be created, updated and deleted. Information inside the cards can also be manipulated. Application have a grid based layout and is 100% responsive. A modal is oppened every time a card is created, changed or deleted. Local storage is used so no information is lost when the application is closed.",
     link: "https://github.com/DavidBitner/crud/",
   },
   project5: {

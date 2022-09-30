@@ -39,6 +39,8 @@ class UI {
       return;
     }
 
+    UI.loadProject(projects[`${projectId}`]);
+
     const popup = document.querySelector(`.popup`);
     const overlay = document.querySelector(`#overlay-popup`);
 
@@ -85,7 +87,37 @@ class UI {
 
   static loadProject(project) {
     const projectIcon = document.querySelector(`.popup__icon`);
-    projectIcon.style.backgroundImage = `url("${project.icon}")`;
+    const projectTitle = document.querySelector(`.popup__title`);
+    const projectSubtitle = document.querySelector(`.popup__subtitle`);
+    const highlightsContainer = document.querySelector(`.popup__highlights`);
+    const imgsContainer = document.querySelector(`.popup__imgs`);
+    const projectText = document.querySelector(`.popup__text`);
+    const projectBtn = document.querySelector(`.popup__btn`);
+
+    highlightsContainer.innerHTML = "";
+    imgsContainer.innerHTML = "";
+
+    projectIcon.style.backgroundImage = `url("src/img/projects/${project.icon}")`;
+    projectTitle.innerHTML = project.title;
+    projectSubtitle.innerHTML = project.subtitle;
+    projectText.innerHTML = project.text;
+    projectBtn.href = project.link;
+
+    project.highlights.forEach((highlight) => {
+      const element = document.createElement("div");
+      element.classList.add("popup__highlight");
+      element.innerHTML = highlight;
+
+      highlightsContainer.appendChild(element);
+    });
+
+    project.imgs.forEach((img) => {
+      const element = document.createElement("div");
+      element.classList.add("popup__img");
+      element.style.backgroundImage = `url("src/img/projects/${img}")`;
+
+      imgsContainer.appendChild(element);
+    });
   }
 }
 
