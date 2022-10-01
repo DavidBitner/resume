@@ -294,7 +294,10 @@ body {
     display: grid;
     grid-auto-flow: column;
     gap: 2rem;
-    cursor: grab; }
+    cursor: grab;
+    user-select: none;
+    overflow: hidden;
+    height: 40rem; }
   .popup__img {
     background-color: #333;
     height: 40rem;

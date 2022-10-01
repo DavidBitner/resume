@@ -59,6 +59,8 @@ class UI {
     overlay.style.opacity = "0";
     popup.style.transform = "translateY(100rem)";
     popup.scrollTop = 0;
+
+    document.querySelector(".popup__imgs").scrollLeft = 0;
   }
 
   static openModal() {
@@ -146,7 +148,3 @@ document.querySelector(".projects").addEventListener("mouseleave", (e) => {
 document
   .querySelector(`#btn-more-projects`)
   .addEventListener("click", UI.openModal);
-
-function createProject(title, img) {
-  const grid = document.querySelector(`.modal__grid`);
-}

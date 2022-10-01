@@ -71,6 +71,9 @@
     grid-auto-flow: column;
     gap: $gap;
     cursor: grab;
+    user-select: none;
+    overflow: hidden;
+    height: 40rem;
   }
 
   &__img {
