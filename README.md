@@ -1,2 +1,2 @@
-# bitner
+# Bitner
  My main page
