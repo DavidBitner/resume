@@ -196,31 +196,43 @@ body {
     .project:hover img {
       opacity: 40%; }
 
-.list {
-  font-size: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+.skills__grid {
   padding: 4rem;
-  list-style-type: none;
-  color: #000; }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; }
+
+.skills__title {
+  font-size: 2rem; }
+
+.skills .separator {
+  grid-column: 1/4;
+  margin: 4rem 0; }
+
+.list {
+  padding: 0 0 1.5rem 1.5rem;
+  list-style: none; }
   .list__item {
-    border: 1px solid rgba(0, 0, 0, 0.95);
-    background-color: #fff; }
-    .list__item--progress {
-      box-sizing: border-box;
-      transition: all 0.5s;
-      display: grid;
-      align-content: center;
-      background: #90ee90;
-      width: 0;
-      height: 50px; }
-      .list__item--progress-text {
-        padding-left: 2rem; }
-    .list__item:hover .list__item--progress {
-      letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: #dedede; }
+    .list__item::before {
+      content: "\2022";
+      color: #d6a283;
       font-weight: bold;
-      width: 60%; }
+      display: inline-block;
+      width: 1em;
+      margin-left: -1rem; }
+
+.github {
+  display: grid;
+  grid-column: 2/3;
+  justify-self: center;
+  padding: 4rem; }
+  .github__text {
+    font-style: italic;
+    font-size: 1.5rem; }
+  .github__btn {
+    font-size: 1rem; }
 
 .footer {
   display: grid;

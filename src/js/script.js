@@ -82,8 +82,8 @@ class UI {
   }
 
   static loadTitles() {
-    for (let i = 1; i <= 4; i++) {
-      particlesJS.load(`title${i}`, "src/js/particles.json", function () {});
+    for (let i = 1; i <= 5; i++) {
+      particlesJS.load(`title${i}`, "src/js/particles.json");
     }
   }
 
