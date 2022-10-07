@@ -1,0 +1,8 @@
+.contact {
+  display: grid;
+  
+  &__link {
+    text-decoration: none;
+    color: $color-primary;
+  }
+}

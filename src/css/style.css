@@ -387,3 +387,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+.contact {
+  display: grid; }
+  .contact__link {
+    text-decoration: none;
+    color: #d6a283; }
