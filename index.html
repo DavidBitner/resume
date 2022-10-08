@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bitner</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="src/css/style.css" />
     <script
       defer
@@ -229,23 +236,31 @@
       <section class="contact">
         <div id="title5" class="title">
           <div class="title__text">
-            <div class="contact__text">Contact</div>
-
-            <div class="contact__section">
-              <div class="contact__icon" id="contact-linkedin"></div>
-              <a
-                href="https://www.linkedin.com/in/david-bitner/"
-                target="blank"
-                class="contact__link"
-                >Linkedin</a
-              >
-            </div>
-
-            <div class="contact__section">
-              <div class="contact__icon" id="contact-email"></div>
-              <a href="david-bitner@hotmail.com" target="blank" class="contact__link"
-                >Email</a
-              >
+            <div class="contact__grid">
+              <ul class="contact__list">
+                <li class="contact__list--item">
+                  <a
+                    href="https://www.linkedin.com/in/david-bitner/"
+                    target="_blank"
+                    class="contact__list--link"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li class="contact__list--item">
+                  <a href="mailto: david-bitner@hotmail.com" class="contact__list--link"
+                    ><i class="fa fa-envelope" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="contact__list--item">
+                  <a
+                    href="https://github.com/DavidBitner"
+                    target="_blank"
+                    class="contact__list--link"
+                    id="github-icon"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -321,15 +336,7 @@
       </div>
 
       <footer class="footer">
-        <div class="footer__text">
-          By
-          <a
-            class="footer__link"
-            target="_blank"
-            href="https://github.com/DavidBitner"
-            >Bitner</a
-          >
-        </div>
+        <div class="footer__text">By Bitner</div>
       </footer>
     </div>
   </body>

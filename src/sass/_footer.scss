@@ -4,15 +4,6 @@
   color: $color-white;
   justify-items: center;
   font-size: 2rem;
-  padding: $padding-big;
+  padding: $padding-size;
   transition: all 0.2s;
-
-  &__link {
-    text-decoration: none;
-    color: $color-white;
-
-    &:hover {
-      color: $color-primary;
-    }
-  }
 }

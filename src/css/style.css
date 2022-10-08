@@ -240,13 +240,8 @@ body {
   color: #fff;
   justify-items: center;
   font-size: 2rem;
-  padding: 6rem;
+  padding: 4rem;
   transition: all 0.2s; }
-  .footer__link {
-    text-decoration: none;
-    color: #fff; }
-    .footer__link:hover {
-      color: #d6a283; }
 
 .overlay {
   height: 100vh;
@@ -388,8 +383,62 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
-.contact {
-  display: grid; }
-  .contact__link {
+.contact .title {
+  height: 40rem; }
+  .contact .title__text {
+    text-shadow: none;
+    pointer-events: all; }
+
+.contact__grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  z-index: -10; }
+
+.contact__list {
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between; }
+  .contact__list--item {
+    list-style: none; }
+    .contact__list--item:nth-child(1) a:hover:before {
+      background: #0077b5; }
+    .contact__list--item:nth-child(2) a:hover:before {
+      background: #d6a283; }
+    .contact__list--item:nth-child(3) a:hover:before {
+      background: #fff; }
+  .contact__list--link {
+    display: inline-flex;
+    font-size: 8rem;
     text-decoration: none;
-    color: #d6a283; }
+    color: #fff;
+    width: 20rem;
+    height: 20rem;
+    transition: 0.5s linear;
+    position: relative;
+    z-index: 1;
+    margin: auto; }
+    .contact__list--link:hover {
+      color: #fff; }
+      .contact__list--link:hover::before {
+        transform: scale(1); }
+    .contact__list--link i {
+      margin: auto; }
+    .contact__list--link::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 20rem;
+      height: 20rem;
+      background: #000;
+      border-radius: 50%;
+      z-index: -1;
+      transform: scale(0);
+      transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21); }
+
+#github-icon:hover {
+  color: #000; }
