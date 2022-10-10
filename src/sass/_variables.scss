@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 
 // Colors
-$color-primary: #d6a283;
-$color-primary-light: #e3bea9;
-$color-primary-dark: #8e5433;
+$color-primary: #a9a9a9;
 
 $color-gray-light-1: #f7f7f7;
 $color-gray-light-2: #eee;
-$color-gray-light-2: #dedede;
+$color-gray-light-3: #dedede;
 
 $color-gray-dark-1: #999;
 $color-gray-dark-2: #333;
@@ -34,6 +32,8 @@ $shadow-white-big: 0 0 20px #333;
 
 // Grid
 $gap: 2rem;
+$gap-small: 1rem;
+$gap-big: 4rem;
 
 $padding-size: 4rem;
 $padding-small: 2rem;

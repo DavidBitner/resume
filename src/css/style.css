@@ -52,16 +52,16 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  border-color: #d6a283;
+  border-color: #a9a9a9;
   color: #fff;
-  box-shadow: 0 0 40px 40px #d6a283 inset, 0 0 0 0 #d6a283;
+  box-shadow: 0 0 40px 40px #a9a9a9 inset, 0 0 0 0 #a9a9a9;
   transition: all 150ms ease-in-out;
   margin-top: 2rem;
   text-decoration: none; }
   .btn:hover, .btn:focus {
     color: #fff;
     outline: 0;
-    box-shadow: 0 0 10px 0 #d6a283 inset, 0 0 10px 4px #d6a283; }
+    box-shadow: 0 0 10px 0 #a9a9a9 inset, 0 0 10px 4px #a9a9a9; }
 
 @keyframes backgroundHeaderAnimation {
   0% {
@@ -110,7 +110,7 @@ body {
   grid-template-columns: 1fr; }
 
 ::selection {
-  background-color: #d6a283;
+  background-color: #a9a9a9;
   color: #fff; }
 
 .header {
@@ -192,9 +192,26 @@ body {
     border-radius: 0.5rem; }
   .project:hover {
     transform: scale(1.03);
-    box-shadow: 0px 0px 20px #d6a283; }
+    box-shadow: 0px 0px 20px #a9a9a9; }
     .project:hover img {
       opacity: 40%; }
+
+.education {
+  font-size: 2rem; }
+  .education__grid {
+    padding: 4rem;
+    display: grid;
+    gap: 4rem; }
+  .education__item {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 1rem;
+    justify-content: right; }
+  .education__where, .education__title {
+    font-weight: bold;
+    color: #a9a9a9; }
+  .education__period, .education__text {
+    font-size: 1.8rem; }
 
 .skills__grid {
   padding: 4rem;
@@ -217,7 +234,7 @@ body {
     color: #dedede; }
     .list__item::before {
       content: "\2022";
-      color: #d6a283;
+      color: #a9a9a9;
       font-weight: bold;
       display: inline-block;
       width: 1em;
@@ -405,7 +422,7 @@ body {
     .contact__list--item:nth-child(1) a:hover:before {
       background: #0077b5; }
     .contact__list--item:nth-child(2) a:hover:before {
-      background: #d6a283; }
+      background: #a9a9a9; }
     .contact__list--item:nth-child(3) a:hover:before {
       background: #fff; }
   .contact__list--link {
