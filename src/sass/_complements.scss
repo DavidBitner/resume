@@ -47,3 +47,37 @@
     box-shadow: 0 0 10px 0 $color-primary inset, 0 0 10px 4px $color-primary;
   }
 }
+
+#change-language {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+  text-align: center;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #009b3a;
+
+    & img {
+      transform: scale(1);
+    }
+  }
+
+  & img {
+    transform: scale(2);
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    transition: all 0.2s;
+  }
+}

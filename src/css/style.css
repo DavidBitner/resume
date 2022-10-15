@@ -63,6 +63,33 @@
     outline: 0;
     box-shadow: 0 0 10px 0 #a9a9a9 inset, 0 0 10px 4px #a9a9a9; }
 
+#change-language {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  background-color: white;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+  text-align: center;
+  overflow: hidden; }
+  #change-language:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #009b3a; }
+    #change-language:hover img {
+      transform: scale(1); }
+  #change-language img {
+    transform: scale(2);
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    transition: all 0.2s; }
+
 @keyframes backgroundHeaderAnimation {
   0% {
     transform: scale(1) translate(0, 0);
