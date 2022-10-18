@@ -22,6 +22,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $gap;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__project {

@@ -8,8 +8,6 @@ class UI {
 
     const body = document.querySelector("body");
 
-    body.style.color = "white";
-
     if (projectId == "project1") {
       body.style.backgroundColor = "#195020";
     }

@@ -5,11 +5,19 @@
     grid-template-columns: repeat(3, 1fr);
     gap: $gap;
     font-size: $font-normal;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__btn {
     padding: $padding-size;
     grid-column: 2/3;
+
+    @include respond(phone) {
+      grid-column: 1/2;
+    }
   }
 }
 
@@ -47,6 +55,10 @@
     opacity: 0;
     transition: opacity 500ms ease 0s;
     border-radius: $border-radius;
+
+    @include respond(tab-land) {
+      opacity: 20%;
+    }
   }
 
   &:hover {

@@ -47,6 +47,12 @@
       z-index: 1;
       margin: auto;
 
+      @include respond(phone) {
+        width: 10rem;
+        height: 10rem;
+        font-size: 4rem;
+      }
+
       &:hover {
         color: $color-white;
 
@@ -73,6 +79,11 @@
         z-index: -1;
         transform: scale(0);
         transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+
+        @include respond(phone) {
+          width: 10rem;
+          height: 10rem;
+        }
       }
     }
   }

@@ -155,7 +155,7 @@ body {
     z-index: 0;
     animation: backgroundHeaderAnimation 20s ease-in-out 0s infinite alternate forwards;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.png");
-    background-size: contain;
+    background-size: cover;
     background-position: center; }
   .header__content {
     z-index: 1;
@@ -181,10 +181,16 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   font-size: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .projects__grid {
+      grid-template-columns: 1fr; } }
 
 .projects__btn {
   padding: 4rem;
   grid-column: 2/3; }
+  @media only screen and (max-width: 37.5em) {
+    .projects__btn {
+      grid-column: 1/2; } }
 
 .project {
   background-color: #000;
@@ -217,6 +223,9 @@ body {
     opacity: 0;
     transition: opacity 500ms ease 0s;
     border-radius: 0.5rem; }
+    @media only screen and (max-width: 75em) {
+      .project__img {
+        opacity: 20%; } }
   .project:hover {
     transform: scale(1.03);
     box-shadow: 0px 0px 20px #a9a9a9; }
@@ -232,8 +241,10 @@ body {
   .education__item {
     display: grid;
     grid-template-columns: 25% 1fr;
-    gap: 1rem;
-    justify-content: right; }
+    gap: 1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .education__item {
+        column-gap: 2rem; } }
   .education__where, .education__title {
     font-weight: bold;
     color: #a9a9a9; }
@@ -245,6 +256,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .skills__grid {
+      grid-template-columns: 1fr; } }
 
 .skills__title {
   font-size: 2rem; }
@@ -252,6 +266,9 @@ body {
 .skills .separator {
   grid-column: 1/4;
   margin: 4rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .skills .separator {
+      grid-column: 1/2; } }
 
 .list {
   padding: 0 0 1.5rem 1.5rem;
@@ -271,7 +288,11 @@ body {
   display: grid;
   grid-column: 2/3;
   justify-self: center;
-  padding: 4rem; }
+  padding: 4rem;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .github {
+      grid-column: 1/2; } }
   .github__text {
     font-style: italic;
     font-size: 1.5rem; }
@@ -337,6 +358,9 @@ body {
     display: grid;
     grid-template-columns: repeat(4, max-content);
     gap: 2rem; }
+    @media only screen and (max-width: 75em) {
+      .popup__highlights {
+        overflow: auto; } }
   .popup__highlight {
     padding: 2rem;
     border: 0.5px solid rgba(255, 255, 255, 0.18);
@@ -349,6 +373,9 @@ body {
     user-select: none;
     overflow: hidden;
     height: 40rem; }
+    @media only screen and (max-width: 75em) {
+      .popup__imgs {
+        overflow: auto; } }
   .popup__img {
     background-color: #333;
     height: 40rem;
@@ -382,6 +409,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .modal__grid {
+        grid-template-columns: 1fr; } }
   .modal__project {
     background-color: #7b7b7b;
     height: 15rem;
@@ -463,6 +493,11 @@ body {
     position: relative;
     z-index: 1;
     margin: auto; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__list--link {
+        width: 10rem;
+        height: 10rem;
+        font-size: 4rem; } }
     .contact__list--link:hover {
       color: #fff; }
       .contact__list--link:hover::before {
@@ -483,6 +518,10 @@ body {
       z-index: -1;
       transform: scale(0);
       transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21); }
+      @media only screen and (max-width: 37.5em) {
+        .contact__list--link::before {
+          width: 10rem;
+          height: 10rem; } }
 
 #github-icon:hover {
   color: #000; }

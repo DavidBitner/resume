@@ -4,15 +4,23 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $gap;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__title {
     font-size: $font-normal;
   }
 
-  .separator{
+  .separator {
     grid-column: 1/4;
     margin: $padding-size 0;
+
+    @include respond(phone) {
+      grid-column: 1/2;
+    }
   }
 }
 
@@ -40,8 +48,13 @@
   grid-column: 2/3;
   justify-self: center;
   padding: $padding-size;
+  text-align: center;
 
-  &__text{
+  @include respond(phone) {
+    grid-column: 1/2;
+  }
+
+  &__text {
     font-style: italic;
     font-size: $font-small;
   }

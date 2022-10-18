@@ -58,6 +58,10 @@
     display: grid;
     grid-template-columns: repeat(4, max-content);
     gap: $gap;
+
+    @include respond(tab-land) {
+      overflow: auto;
+    }
   }
 
   &__highlight {
@@ -74,6 +78,10 @@
     user-select: none;
     overflow: hidden;
     height: 40rem;
+
+    @include respond(tab-land) {
+      overflow: auto;
+    }
   }
 
   &__img {

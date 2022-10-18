@@ -11,7 +11,10 @@
     display: grid;
     grid-template-columns: 25% 1fr;
     gap: $gap-small;
-    justify-content: right;
+
+    @include respond(phone) {
+      column-gap: $gap;
+    }
   }
 
   &__where,
