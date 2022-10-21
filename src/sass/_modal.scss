@@ -17,6 +17,7 @@
   font-size: 2rem;
   box-shadow: $shadow-white;
   border-radius: $border-radius-big;
+  overflow: auto;
 
   &__grid {
     display: grid;

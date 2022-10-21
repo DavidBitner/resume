@@ -404,7 +404,8 @@ body {
   padding: 4rem;
   font-size: 2rem;
   box-shadow: 0 0 10px #333;
-  border-radius: 2rem; }
+  border-radius: 2rem;
+  overflow: auto; }
   .modal__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
