@@ -24,7 +24,7 @@ class UI {
       body.style.backgroundColor = "#000533";
     }
     if (projectId == "project6") {
-      body.style.backgroundColor = "#212121";
+      body.style.backgroundColor = "#771111";
     }
   }
 

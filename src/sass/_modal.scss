@@ -40,6 +40,9 @@
     border-radius: $border-radius;
     text-decoration: none;
     color: white;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
 
     &:hover {
       box-shadow: $shadow-white-big;
@@ -48,18 +51,35 @@
   }
 }
 
-#other1 {
-  @include backgroundProject("../img/projects/bcc.png");
+#other-bcc {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/bcc.png");
 }
-#other2 {
-  @include backgroundProject("../img/projects/quizApp.png");
+#other-quiz {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/quizApp.png");
 }
-#other3 {
-  @include backgroundProject("../img/projects/sliders.png");
+#other-slider {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/sliders.png");
 }
-#other4 {
-  @include backgroundProject("../img/projects/list.png");
+#other-list {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/list.png");
 }
-#other5 {
-  @include backgroundProject("../img/projects/despertador.png");
+#other-despertador {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/despertador.png");
+}
+#other-login {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/login.png");
+}
+#other-dictionary {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/dictionary.png");
+}
+#other-timers {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../img/projects/timers.png");
 }

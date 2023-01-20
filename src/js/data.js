@@ -59,7 +59,7 @@ const projects = {
     highlights: ["JS Classes", "CRUD"],
     imgs: ["crud1.png", "crud2.png", "crud3.png"],
     text: "An application with cards, these cards can be visualized, can be created, updated and deleted. Information inside the cards can also be manipulated. Application have a grid based layout and is 100% responsive. A modal is oppened every time a card is created, changed or deleted. Local storage is used so no information is lost when the application is closed.",
-    link: "https://github.com/DavidBitner/crud/",
+    link: "https://davidbitner.github.io/crud/",
   },
   project5: {
     title: "Shapes Colors",
@@ -78,13 +78,13 @@ const projects = {
     link: "https://davidbitner.github.io/shapes-colors/",
   },
   project6: {
-    title: "Timers",
-    subtitle: "An application with multiple timers.",
-    icon: "timersIcon.png",
-    highlights: ["Set Interval", "Modal", "Grid Responsivenes"],
-    imgs: ["timers1.png", "timers2.png", "timers3.png"],
-    text: "Multiple timers in a responsive grid. Timers can be added, removed, reset and changed based on the options available inside a modal. Timers also have a progress bar based on how much time is left until the timer ends. Also a sound is played every time a timer ends.",
-    link: "https://davidbitner.github.io/timers/",
+    title: "Movie Guide",
+    subtitle: "An application to search for movies details.",
+    icon: "movieGuideIcon.png",
+    highlights: ["API call", "Grid Responsivenes"],
+    imgs: ["movieGuide1.png", "movieGuide2.png", "movieGuide3.png"],
+    text: "Movie search application, input a title, api call return the details about the movie and the application shows that info to the user.",
+    link: "https://davidbitner.github.io/movie-guide/",
   },
 };
 

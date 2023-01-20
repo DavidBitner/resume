@@ -2,7 +2,7 @@ const projects = {
   project1: {
     title: "30 projects",
     subtitle:
-      "Um grande projecto envolvendo multiplos conceitos e teconologias.",
+      "Um grande projeto envolvendo múltiplos conceitos e tecnologias.",
     icon: "30projectsIcon.png",
     highlights: ["API's", "Custom Canvas", "JavaScript modules"],
     imgs: [
@@ -20,7 +20,7 @@ const projects = {
       "30projects12.png",
       "30projects13.png",
     ],
-    text: "Um projeto feito para testar e demontrar várias skills. Conceitos como custom canvas na homepage para criar um efeito matrix, consumo de diferentes api's, css, scss, um pouco de bootstrap e muitas diferentes aplicações de JavaScript.",
+    text: "Um projeto feito para testar e demonstrar várias skills. Conceitos como custom canvas na homepage para criar um efeito matrix, consumo de diferentes api's, css, scss, um pouco de bootstrap e muitas diferentes aplicações de JavaScript.",
     link: "https://davidbitner.github.io/30-projects/",
   },
   project2: {
@@ -41,7 +41,7 @@ const projects = {
       "landingsPage5.png",
       "landingsPage6.png",
     ],
-    text: "Uma landing page feita usando alguns conceitos agile de desenvolvimento de software como sprints, um mapa mental, diagrama de classe entre outros. Animações de bezier complexas para criar um efeito cinematografico no main banner, multiplas animações de transição, modais, tudo usando BEM naming pattern.",
+    text: "Uma landing page feita usando alguns conceitos agile de desenvolvimento de software como sprints, um mapa mental, diagrama de classe entre outros. Animações de bezier complexas para criar um efeito cinematográfico no main banner, múltiplas animações de transição, modais, tudo usando BEM naming pattern.",
     link: "https://davidbitner.github.io/landings-page/",
   },
   project3: {
@@ -50,7 +50,7 @@ const projects = {
     icon: "autoBlogIcon.png",
     highlights: ["Blog", "API", "Loading info"],
     imgs: ["autoBlog1.png", "autoBlog2.png", "autoBlog3.png"],
-    text: "Este é um website que usa a api newscather para gerar noticias baseadas em um tópico, com a informação gerada pela api um post é automaticamente criado. O site é 100% responsivo. Botões tem um ripple effect criado em CSS e JS. O site também possue uma feature de loading para os posts que funciona enquanto as informações e o post em si são gerados no background.",
+    text: "Este é um website que usa a api newscather para gerar notícias baseadas em um tópico, com a informação gerada pela api um post é automaticamente criado. O site é 100% responsivo. Botões tem um ripple effect criado em CSS e JS. O site também possui uma feature de loading para os posts que funciona enquanto as informações e o post em si são gerados no background.",
     link: "https://davidbitner.github.io/auto-blog/",
   },
   project4: {
@@ -60,12 +60,12 @@ const projects = {
     highlights: ["JS Classes", "CRUD"],
     imgs: ["crud1.png", "crud2.png", "crud3.png"],
     text: "Uma aplicação com cards, estes cards podem ser visualizados, criados, atualizados e deletados. As informações dentro de um card também podem ser manipuladas. A aplicação tem um layout grid e é 100% responsiva. Um modal é aberto toda vez que um card é criado, alterado ou deletado. Local storage é usado para que nenhuma informação seja perdida quando a aplicação for fechada.",
-    link: "https://github.com/DavidBitner/crud/",
+    link: "https://davidbitner.github.io/crud/",
   },
   project5: {
     title: "Shapes Colors",
     subtitle:
-      "Um website criado especificamente para aprender a como manipular containeres, posições do mouse e eventos que tem como gatilho o teclado.",
+      "Um website criado especificamente para aprender a como manipular containers, posições do mouse e eventos que tem como gatilho o teclado.",
     icon: "shapesColorsIcon.png",
     highlights: ["Mouse Position", "Keyboard Options"],
     imgs: [
@@ -79,13 +79,13 @@ const projects = {
     link: "https://davidbitner.github.io/shapes-colors/",
   },
   project6: {
-    title: "Timers",
-    subtitle: "Uma aplicação com multiplos timers.",
-    icon: "timersIcon.png",
-    highlights: ["Set Interval", "Modal", "Grid Responsivenes"],
-    imgs: ["timers1.png", "timers2.png", "timers3.png"],
-    text: "Multiplos timers em um grid responsivo. Timers podem ser adicionados, removidos, resetados e mudados com base em opções disponiveis dentro de um modal. Timers também possuem uma barra de progresso que muda com base em quanto tempo falta para o timer acabar. Timers também fazem um som ao terminar.",
-    link: "https://davidbitner.github.io/timers/",
+    title: "Movie Guide",
+    subtitle: "Aplicação para pesquisar por detalhes de filmes.",
+    icon: "movieGuideIcon.png",
+    highlights: ["API call", "Grid Responsivenes"],
+    imgs: ["movieGuide1.png", "movieGuide2.png", "movieGuide3.png"],
+    text: "Website para procura de filmes, usuário coloca o nome do filme no campo de pesquisa, uma call para uma api é feita, e a aplicação mostra para o usuário as informações providas pela api.",
+    link: "https://davidbitner.github.io/movie-guide/",
   },
 };
 

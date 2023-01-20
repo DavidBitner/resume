@@ -153,7 +153,8 @@ body {
     height: 100%;
     width: 100%;
     z-index: 0;
-    animation: backgroundHeaderAnimation 20s ease-in-out 0s infinite alternate forwards;
+    animation: backgroundHeaderAnimation 20s ease-in-out 0s infinite alternate
+ forwards;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.png");
     background-size: cover;
     background-position: center; }
@@ -423,40 +424,37 @@ body {
     transition: all 0.2s;
     border-radius: 0.5rem;
     text-decoration: none;
-    color: white; }
+    color: white;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; }
     .modal__project:hover {
       box-shadow: 0 0 20px #333;
       transform: scale(1.1); }
 
-#other1 {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/bcc.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+#other-bcc {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/bcc.png"); }
 
-#other2 {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/quizApp.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+#other-quiz {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/quizApp.png"); }
 
-#other3 {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/sliders.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+#other-slider {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/sliders.png"); }
 
-#other4 {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/list.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+#other-list {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/list.png"); }
 
-#other5 {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/despertador.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
+#other-despertador {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/despertador.png"); }
+
+#other-login {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/login.png"); }
+
+#other-dictionary {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/dictionary.png"); }
+
+#other-timers {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/projects/timers.png"); }
 
 .contact .title {
   height: 40rem; }
