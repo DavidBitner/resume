@@ -1,0 +1,116 @@
+Main Banner{
+  Title: David Bitner
+  Subtitle: Resume something
+
+  Big image banner with some effects
+  Video behind text
+}
+
+About me/profile{
+  Title: profile
+  Subtitle: something
+
+  About me:
+
+  I'm mostly self taught, most of my skills come from places like Udemy, YouTube, Google and online forums like StackOverflow and Reddit.
+
+  Details:
+
+}
+
+My projets{
+  Title: Projects
+  
+  Project Title:
+  Project text:
+  Project prints:
+  Project Link:
+
+  CARDS+COOLPOPUPS
+
+}
+
+Education{
+  Title:Education
+  Subtitle: 
+
+  Bachelor:
+  Courses:
+
+  TIMELINE+PRINTS/GIFS
+}
+
+Abilities{
+  Title: Abilities
+
+  Abilitie:
+  Proficiency:
+
+  PERCENTAGE BARS
+}
+
+Contact/footer{
+  Title: Contact
+  Subtitle: something
+
+  Social Media Links
+}
+
+Fix titles
+
+Create education section
+Add other projects to modal
+
+Add JavaScript to popup Project
+
+Create texts for page
+Create texts for skills
+
+Adjust responsivenes
+
+Create portuguese website
+
+
+QuizApp: https://davidbitner.github.io/quiz-app/
+BlueCrystalCalculator: https://davidbitner.github.io/blue-crystal-calculator/
+Sliders: https://davidbitner.github.io/slider-design/
+List: https://davidbitner.github.io/list/
+Despertador: https://davidbitner.github.io/despertador/
+
+AutoBlog:https://davidbitner.github.io/auto-blog/
+Crud: https://davidbitner.github.io/crud/
+LandingsPage: https://davidbitner.github.io/landings-page/
+Timers: https://davidbitner.github.io/timers/
+ShapesColors: https://davidbitner.github.io/shapes-colors/
+30Projects: https://davidbitner.github.io/30-projects/
+
+
+
+
+Comunication
+Honesty
+Integrity
+Reliability
+Conflict resolution
+Emotional intelligence
+Teamwork
+Willingness to learn
+
+Flexibility
+Self-management
+Problem solving
+
+Critical Thinking
+
+
+Communication
+Temwork
+Problem Solving
+Planning
+Troubleshooting
+Written communication
+
+
+Commitment
+Focus
+Openness
