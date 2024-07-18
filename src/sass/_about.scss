@@ -4,5 +4,12 @@
     gap: $gap;
     font-size: 2rem;
     padding: $padding-size;
+    text-align: justify;
+
+    a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
   }
 }

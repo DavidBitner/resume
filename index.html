@@ -14,12 +14,459 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="src/css/style.css" />
-    <script defer type="module" src="src/js/scriptPt.js"></script>
+    <link rel="stylesheet" href="src/css/style.min.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"
+    ></script>
+    <script defer type="module" src="src/js/script.js"></script>
+    <script defer type="module" src="src/js/dragToScroll.js"></script>
   </head>
   <body>
     <div class="container">
-      <h1>Under Maintenance</h1>
+      <header class="header">
+        <div class="header__background"></div>
+        <div class="header__content">
+          <h1 class="header__title">David Bitner</h1>
+          <h2 class="header__subtitle">Interactive Resumé</h2>
+        </div>
+      </header>
+
+      <section class="projects">
+        <div id="title1" class="title">
+          <div class="title__text">My Projects</div>
+        </div>
+        <div class="projects__grid">
+          <div class="project" id="project1">
+            <div class="project__text">30 projects</div>
+            <img
+              src="src/img/project1.png"
+              alt="Project 1 image"
+              class="project__img"
+              id="project1__img"
+            />
+          </div>
+          <div class="project" id="project2">
+            <div class="project__text">Landings page</div>
+            <img
+              src="src/img/project2.png"
+              alt="Project 2 image"
+              class="project__img"
+              id="project1__img"
+            />
+          </div>
+          <div class="project" id="project3">
+            <div class="project__text">Auto blog</div>
+            <img
+              src="src/img/project3.png"
+              alt="Project 3 image"
+              class="project__img"
+              id="project1__img"
+            />
+          </div>
+          <div class="project" id="project4">
+            <div class="project__text">Crud</div>
+            <img
+              src="src/img/project4.png"
+              alt="Project 4 image"
+              class="project__img"
+              id="project1__img"
+            />
+          </div>
+          <div class="project" id="project5">
+            <div class="project__text">Shapes and colors</div>
+            <img
+              src="src/img/project5.png"
+              alt="Project 5 image"
+              class="project__img"
+              id="project1__img"
+            />
+          </div>
+          <div class="project" id="project6">
+            <div class="project__text">Movie Guide</div>
+            <img
+              src="src/img/project6.png"
+              alt="Project 6 image"
+              class="project__img"
+              id="project1__img"
+            />
+          </div>
+          <button class="projects__btn btn" id="btn-more-projects">
+            More Projects
+          </button>
+        </div>
+      </section>
+
+      <section class="about">
+        <div id="title2" class="title">
+          <div class="title__text">About me</div>
+        </div>
+        <div class="about__grid">
+          <div class="about__paragraph">
+            Hello, I'm David Bitner, a technology enthusiast. I have a
+            background in information systems and 2 years of experience as a
+            freelancer, my specialty is web development. I've worked on projects
+            involving HTML, CSS, JavaScript, Git, Python, SQL, WordPress, Adobe
+            XD, among other technologies.
+          </div>
+          <div class="about__paragraph">
+            As a professional, I maintain a high level of dedication, taking
+            full responsibility for my work and meeting deadlines with
+            precision. I am constantly pursuing continuous learning, dedicating
+            hours to self-study and research to stay updated with the latest
+            technologies and trends. My analytical and ethical approach enables
+            me to efficiently and fairly solve problems, always ensuring the
+            integrity and quality of the solutions I deliver. Additionally, I
+            cultivate the necessary patience to handle complex challenges,
+            allowing me to work well in teams, effectively collaborating with
+            colleagues to turn obstacles into opportunities for growth and
+            innovation.
+          </div>
+          <div class="about__paragraph">
+            In addition to my passionate involvement with technology and
+            development, I am an avid enthusiast of nerd culture. This interest
+            not only enriches my leisure time but has also been instrumental in
+            forming friendships with people from different countries, united by
+            our shared passion for science fiction, fantasy universes, and
+            advanced technology. Furthermore, my personal dedication to
+            self-learning English, facilitated by consuming this content, has
+            strengthened my communication skills in a global environment,
+            enabling me to effectively collaborate on international projects.
+          </div>
+          <div class="about__paragraph">
+            I am always open to opportunities to contribute to new projects and
+            teams. To discuss how my skills and experiences can be valuable to
+            your initiatives, please feel free to contact me via email at
+            <a href="mailto:david-bitner@hotmail.com"
+              >david-bitner@hotmail.com</a
+            >. I am available to chat and explore potential collaborations. I
+            look forward to working together on future challenges.
+          </div>
+        </div>
+      </section>
+
+      <section class="education">
+        <div id="title3" class="title">
+          <div class="title__text">Education</div>
+        </div>
+        <div class="education__grid">
+          <div class="education__item">
+            <div class="education__where">Universidade Nove de Julho</div>
+            <div class="education__title">
+              Bachelor's Degree, Information Systems
+            </div>
+            <div class="education__period">2016 - 2020</div>
+            <div class="education__text">
+              Bachelor's in Information Systems.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Udemy</div>
+            <div class="education__title">
+              Microsoft Excel - From beginner to advanced
+            </div>
+            <div class="education__period">2024</div>
+            <div class="education__text">
+              Complete course on Microsoft Excel with an in-depth analysis of
+              all tools provided by the application.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Udemy</div>
+            <div class="education__title">Advanced CSS and Sass</div>
+            <div class="education__period">2021</div>
+            <div class="education__text">
+              Advanced modern CSS course. Mastering flexbox, CSS grid,
+              responsive design, and other advanced CSS and Sass concepts.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Udemy</div>
+            <div class="education__title">Data Modeling</div>
+            <div class="education__period">2021</div>
+            <div class="education__text">
+              Data modeling course using UML. Theory and practice.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Udemy</div>
+            <div class="education__title">The Complete JavaScript Course</div>
+            <div class="education__period">2021</div>
+            <div class="education__text">
+              Modern JavaScript course to master JavaScript with projects,
+              challenges, and theory. Course covers JavaScript fundamentals, how
+              JavaScript works under the hood, data structures, modern
+              operators, arrays, advanced DOM manipulation, OOP with JavaScript,
+              and projects for practice.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Udemy</div>
+            <div class="education__title">Bootstrap 4 From Scratch</div>
+            <div class="education__period">2020</div>
+            <div class="education__text">
+              Bootstrap 4 course with real-world projects.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Curso em Video</div>
+            <div class="education__title">Digital Marketing</div>
+            <div class="education__period">2020</div>
+            <div class="education__text">Digital Marketing fundamentals.</div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Curso em Video</div>
+            <div class="education__title">Git and GitHub</div>
+            <div class="education__period">2020</div>
+            <div class="education__text">
+              Basics of Git and GitHub. All about version control using these
+              tools.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Udemy</div>
+            <div class="education__title">UI Design: Interface Design</div>
+            <div class="education__period">2019</div>
+            <div class="education__text">
+              UI design course focusing on interface design. Concepts include
+              UI/UX design, briefing, wireframing, advanced typography,
+              responsive design, and prototyping using Adobe XD.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Escola Municipal de Astrofisica</div>
+            <div class="education__title">
+              General Astronomy and Solar Astronomy
+            </div>
+            <div class="education__period">2014</div>
+            <div class="education__text">
+              Introduction courses to astronomy concepts aiming to discover
+              whether this would be a career path or just a hobby.
+            </div>
+          </div>
+          <div class="education__item">
+            <div class="education__where">Runaway Informática</div>
+            <div class="education__title">
+              Microsoft Office, Networks, and Windows
+            </div>
+            <div class="education__period">2011</div>
+            <div class="education__text">
+              Introduction course to the Office package, network systems, and
+              the Windows operating system.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills">
+        <div id="title4" class="title">
+          <div class="title__text">Skills</div>
+        </div>
+        <div class="skills__grid">
+          <div class="skills__grid--column">
+            <div class="skills__title">Main Languages and Technologies</div>
+            <ul class="list">
+              <li class="list__item">JavaScript</li>
+              <li class="list__item">Sass</li>
+              <li class="list__item">CSS</li>
+              <li class="list__item">HTML</li>
+              <li class="list__item">Python</li>
+            </ul>
+            <div class="skills__title">Most Used Tools</div>
+            <ul class="list">
+              <li class="list__item">Visual Studio Code</li>
+              <li class="list__item">Git and GitHub</li>
+              <li class="list__item">Adobe XD</li>
+              <li class="list__item">Photoshop</li>
+              <li class="list__item">Microsoft Excel</li>
+              <li class="list__item">Trello</li>
+              <li class="list__item">Illustrator</li>
+              <li class="list__item">WordPress</li>
+            </ul>
+          </div>
+
+          <div class="skills__grid--column">
+            <div class="skills__title">Soft Skills</div>
+            <ul class="list">
+              <li class="list__item">Effective Communication</li>
+              <li class="list__item">Problem Solving</li>
+              <li class="list__item">Adaptability</li>
+              <li class="list__item">Resilience</li>
+              <li class="list__item">Professional Ethics</li>
+              <li class="list__item">Empathy</li>
+              <li class="list__item">Conflict Resolution</li>
+              <li class="list__item">Self-management</li>
+              <li class="list__item">Continuous Learning</li>
+              <li class="list__item">Cultural Adaptability</li>
+            </ul>
+            <div class="skills__title">Languages</div>
+            <ul class="list">
+              <li class="list__item">Portuguese - Native</li>
+              <li class="list__item">English - Fluent</li>
+              <li class="list__item">Spanish - Basic</li>
+            </ul>
+          </div>
+          <div class="separator"></div>
+          <div class="github">
+            <div class="github__text">Project build in vanilla JavaScript.</div>
+            <a
+              href="https://github.com/DavidBitner/resume"
+              class="github__btn btn"
+              target="_blank"
+              >See project on GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div id="title5" class="title">
+          <div class="title__text">
+            <div class="contact__grid">
+              <ul class="contact__list">
+                <li class="contact__list--item">
+                  <a
+                    href="https://www.linkedin.com/in/david-bitner/"
+                    target="_blank"
+                    class="contact__list--link"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li class="contact__list--item">
+                  <a
+                    href="mailto: david-bitner@hotmail.com"
+                    class="contact__list--link"
+                    ><i class="fa fa-envelope" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="contact__list--item">
+                  <a
+                    href="https://github.com/DavidBitner"
+                    target="_blank"
+                    class="contact__list--link"
+                    id="github-icon"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="overlay" id="overlay-popup">
+        <div class="popup">
+          <div class="popup__header">
+            <div class="popup__icon"></div>
+            <div class="popup__title">Popup Title</div>
+            <div class="popup__subtitle">Information about project</div>
+          </div>
+          <div class="separator"></div>
+          <div class="popup__highlights"></div>
+          <div class="popup__imgs"></div>
+          <div class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            aspernatur ullam voluptatem doloremque explicabo nam delectus modi
+            minus ipsum, officia corrupti harum vero in tenetur aut eaque?
+            Inventore iste, explicabo ex molestiae officia quidem incidunt
+            possimus aliquam doloribus maiores voluptatem.
+          </div>
+          <a target="_blank" href="#" class="popup__btn btn">Visit Website</a>
+        </div>
+      </div>
+
+      <div class="overlay" id="overlay-modal">
+        <div class="modal">
+          <div class="modal__title">Other Projects</div>
+          <div class="modal__grid">
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/blue-crystal-calculator/"
+              id="other-bcc"
+            >
+              <div class="modal__project--text">Blue Crystal Calculator</div>
+            </a>
+
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/dictionary/"
+              id="other-dictionary"
+            >
+              <div class="modal__project--text">Dictionary</div>
+            </a>
+
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/odp/"
+              id="odp"
+            >
+              <div class="modal__project--text">ODP</div>
+            </a>
+
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/timers/"
+              id="other-timers"
+            >
+              <div class="modal__project--text">Timers</div>
+            </a>
+
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/login/"
+              id="other-login"
+            >
+              <div class="modal__project--text">Login</div>
+            </a>
+
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/quiz-app/"
+              id="other-quiz"
+            >
+              <div class="modal__project--text">Quiz APP</div>
+            </a>
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/slider-design/"
+              id="other-slider"
+            >
+              <div class="modal__project--text">Sliders</div>
+            </a>
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/list/"
+              id="other-list"
+            >
+              <div class="modal__project--text">List</div>
+            </a>
+            <a
+              class="modal__project"
+              target="_blank"
+              href="https://davidbitner.github.io/despertador/"
+              id="other-despertador"
+            >
+              <div class="modal__project--text">Alarm Clock</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <a href="index-pt.html" id="change-language"
+        ><img src="src/img/brazil.png" alt="Português Brasil"
+      /></a>
+
+      <footer class="footer">
+        <div class="footer__text">By Bitner</div>
+      </footer>
     </div>
   </body>
 </html>
