@@ -1,4 +1,4 @@
 # Bitner
  My main page
 
-https://github.com/DavidBitner/resume
+https://davidbitner.github.io/resume/
