@@ -33,6 +33,7 @@ class App {
   renderStaticTexts() {
     const t = translations[this.currentLang];
 
+    // Titles
     document.querySelector("#title1 .title__text").textContent =
       t.titles.projects;
     document.querySelector("#title2 .title__text").textContent = t.titles.about;
@@ -41,12 +42,12 @@ class App {
     document.querySelector("#title4 .title__text").textContent =
       t.titles.skills;
 
-    document.querySelector("#btn-more-projects").textContent =
-      t.labels.moreProjects;
+    // Labels & Buttons
     document.querySelector(".github__btn").textContent = t.labels.github;
     document.querySelector(".popup__btn").textContent = t.labels.popupBtn;
     document.querySelector(".footer__text").textContent = t.labels.footer;
 
+    // Skill Subtitles
     const skillTitles = document.querySelectorAll(".skills__title");
     if (skillTitles.length >= 4) {
       skillTitles[0].textContent = t.labels.techTitle;
@@ -57,68 +58,102 @@ class App {
   }
 
   renderDynamicContent() {
-    // 1. Projects
-    Object.values(data.projects).forEach((proj) => {
-      const card = document.getElementById(proj.id);
-      if (card) {
-        card.querySelector(".project__text").textContent =
-          proj[this.currentLang].title;
+    // ---------------------------------------------------------
+    // 1. PROJETOS (Grid Principal + Modal)
+    // ---------------------------------------------------------
+    const projectsGrid = document.querySelector(".projects__grid");
+    const modalGrid = document.querySelector(".modal__grid");
+
+    projectsGrid.innerHTML = "";
+    modalGrid.innerHTML = "";
+
+    data.projects.forEach((proj) => {
+      if (proj.highlight) {
+        // Renderiza na Grade Principal
+        const card = document.createElement("div");
+        card.classList.add("project");
+        card.id = proj.id;
+
+        card.innerHTML = `
+          <div class="project__text">${proj[this.currentLang]?.title || proj.title}</div>
+          <img src="src/img/${proj.imgCover}" alt="${proj.title}" class="project__img" />
+        `;
+        projectsGrid.appendChild(card);
+      } else {
+        // Renderiza no Modal (Outros Projetos)
+        const link = document.createElement("a");
+        link.classList.add("modal__project");
+        link.target = "_blank";
+        link.href = proj.link;
+        link.id = proj.id;
+        link.style.backgroundImage = `
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+          url("src/img/${proj.imgCover}")
+        `;
+        link.innerHTML = `<div class="modal__project--text">${proj.title}</div>`;
+        modalGrid.appendChild(link);
       }
     });
 
-    // 2. About
-    const aboutContainer = document.querySelector(".about__grid");
-    if (aboutContainer && data.about) {
-      aboutContainer.innerHTML = data.about[this.currentLang]
-        .map((p) => `<div class="about__paragraph">${p}</div>`)
+    // Botão "More Projects" (recriado dinamicamente)
+    const btnMore = document.createElement("button");
+    btnMore.className = "projects__btn btn";
+    btnMore.id = "btn-more-projects";
+    btnMore.textContent = translations[this.currentLang].labels.moreProjects;
+    projectsGrid.appendChild(btnMore);
+
+    // ---------------------------------------------------------
+    // 2. ABOUT ME
+    // ---------------------------------------------------------
+    const aboutGrid = document.querySelector(".about__grid");
+    if (aboutGrid) {
+      aboutGrid.innerHTML = data.about[this.currentLang]
+        .map((paragraph) => `<p>${paragraph}</p>`)
         .join("");
     }
 
-    // 3. Education
-    const eduContainer = document.querySelector(".education__grid");
-    if (eduContainer && data.education) {
-      eduContainer.innerHTML = data.education
-        .map(
-          (item) => `
-            <div class="education__item">
-                <div class="education__where">${item.where}</div>
-                <div class="education__title">${item[this.currentLang].title}</div>
-                <div class="education__period">${item.period}</div>
-                <div class="education__text">${item[this.currentLang].text}</div>
-            </div>`,
-        )
+    // ---------------------------------------------------------
+    // 3. EDUCATION / JOURNEY (Timeline)
+    // ---------------------------------------------------------
+    const educationGrid = document.querySelector(".education__grid");
+    if (educationGrid) {
+      educationGrid.innerHTML = data.education
+        .map((item) => {
+          const content = item[this.currentLang];
+          return `
+          <div class="education__item">
+            <span class="education__period">${item.period}</span>
+            <h3 class="education__title">${content.title}</h3>
+            <span class="education__where">${item.where}</span>
+            <p class="education__text">${content.text}</p>
+          </div>
+        `;
+        })
         .join("");
     }
 
-    // 4. Skills
-    const techList = document.getElementById("list-tech");
-    const toolsList = document.getElementById("list-tools");
-    const softList = document.getElementById("list-soft");
-    const langList = document.getElementById("list-lang");
+    // ---------------------------------------------------------
+    // 4. SKILLS
+    // ---------------------------------------------------------
+    const renderList = (id, items) => {
+      const list = document.getElementById(id);
+      if (list) {
+        list.innerHTML = items
+          .map((item) => `<li class="list__item">${item}</li>`)
+          .join("");
+      }
+    };
 
-    if (techList)
-      techList.innerHTML = data.skills.tech
-        .map((s) => `<li class="list__item">${s}</li>`)
-        .join("");
-
-    if (toolsList)
-      toolsList.innerHTML = data.skills.tools
-        .map((s) => `<li class="list__item">${s}</li>`)
-        .join("");
-
-    if (softList)
-      softList.innerHTML = data.skills.soft[this.currentLang]
-        .map((s) => `<li class="list__item">${s}</li>`)
-        .join("");
-
-    if (langList)
-      langList.innerHTML = data.skills.languages[this.currentLang]
-        .map((l) => `<li class="list__item">${l}</li>`)
-        .join("");
+    renderList("list-tech", data.skills.tech);
+    renderList("list-tools", data.skills.tools);
+    renderList("list-soft", data.skills.soft[this.currentLang]);
+    renderList("list-lang", data.skills.languages[this.currentLang]);
   }
 
+  // --- LÓGICA DE POPUP E INTERAÇÃO ---
+
   loadProjectPopup(projectId) {
-    const project = data.projects[projectId];
+    const project = data.projects.find((p) => p.id === projectId);
     if (!project) return;
 
     const langData = project[this.currentLang];
@@ -137,6 +172,9 @@ class App {
       .join("");
 
     const imgContainer = popup.querySelector(".popup__imgs");
+    // Reseta o scroll das imagens ao abrir
+    imgContainer.scrollLeft = 0;
+
     imgContainer.innerHTML = project.imgs
       .map(
         (img) =>
@@ -148,7 +186,7 @@ class App {
   }
 
   changeBackground(elementId) {
-    const project = data.projects[elementId];
+    const project = data.projects.find((p) => p.id === elementId);
     if (project && project.color) {
       document.body.style.backgroundColor = project.color;
     }
@@ -160,24 +198,25 @@ class App {
 
   toggleOverlay(selector, show) {
     const overlay = document.querySelector(selector);
-    const content = overlay.firstElementChild;
+    const content = overlay.firstElementChild; // .popup ou .modal
 
     if (show) {
       overlay.style.visibility = "visible";
       overlay.style.opacity = "1";
+
       if (content.classList.contains("popup")) {
         content.style.transform = "translateY(0)";
-        document.body.style.overflow = "hidden";
+        document.body.style.overflow = "hidden"; // Trava scroll da página
       } else {
         content.style.transform = "scale(1)";
       }
     } else {
       overlay.style.visibility = "hidden";
       overlay.style.opacity = "0";
+
       if (content.classList.contains("popup")) {
         content.style.transform = "translateY(100rem)";
-        document.body.style.overflow = "visible";
-        content.scrollTop = 0;
+        document.body.style.overflow = "visible"; // Destrava scroll
       } else {
         content.style.transform = "scale(0.8)";
       }
@@ -186,14 +225,20 @@ class App {
 
   loadParticles() {
     if (window.particlesJS) {
+      // Carrega particulas para title1 até title5
       for (let i = 1; i <= 5; i++) {
-        window.particlesJS.load(`title${i}`, "src/js/particles.json");
+        // Verifica se o elemento existe antes de carregar
+        if (document.getElementById(`title${i}`)) {
+          window.particlesJS.load(`title${i}`, "src/js/particles.json");
+        }
       }
     }
   }
 
   initDragToScroll() {
     const slider = document.querySelector(".popup__imgs");
+    if (!slider) return;
+
     let mouseDown = false;
     let startX, scrollLeft;
 
@@ -220,36 +265,46 @@ class App {
   }
 
   addEventListeners() {
-    document
-      .getElementById("change-language")
-      .addEventListener("click", (e) => {
+    // Mudar Idioma
+    const langBtn = document.getElementById("change-language");
+    if (langBtn) {
+      langBtn.addEventListener("click", (e) => {
         e.preventDefault();
         this.toggleLanguage();
       });
+    }
 
+    // Grid de Projetos (Event Delegation)
     const projectsGrid = document.querySelector(".projects");
-    projectsGrid.addEventListener("click", (e) => {
-      const projectCard = e.target.closest(".project");
-      if (projectCard) this.loadProjectPopup(projectCard.id);
+    if (projectsGrid) {
+      projectsGrid.addEventListener("click", (e) => {
+        // Verifica se clicou em um Card de Projeto
+        const projectCard = e.target.closest(".project");
+        if (projectCard) {
+          this.loadProjectPopup(projectCard.id);
+        }
 
-      if (e.target.id === "btn-more-projects")
-        this.toggleOverlay("#overlay-modal", true);
-    });
+        // Verifica se clicou no botão "More Projects"
+        if (e.target.id === "btn-more-projects") {
+          this.toggleOverlay("#overlay-modal", true);
+        }
+      });
 
-    projectsGrid.addEventListener("mouseover", (e) => {
-      const projectCard = e.target.closest(".project");
-      if (projectCard) this.changeBackground(projectCard.id);
-    });
+      projectsGrid.addEventListener("mouseover", (e) => {
+        const projectCard = e.target.closest(".project");
+        if (projectCard) this.changeBackground(projectCard.id);
+      });
 
-    projectsGrid.addEventListener("mouseout", (e) => {
-      if (
-        e.target.closest(".project") &&
-        !e.relatedTarget?.closest(".project")
-      ) {
-        this.resetBackground();
-      }
-    });
+      projectsGrid.addEventListener("mouseout", (e) => {
+        const projectCard = e.target.closest(".project");
+        // Só reseta se o mouse realmente saiu do card, não se entrou num filho dele
+        if (projectCard && !e.relatedTarget?.closest(".project")) {
+          this.resetBackground();
+        }
+      });
+    }
 
+    // Fechar Overlays ao clicar fora
     window.addEventListener("click", (e) => {
       if (e.target.id === "overlay-popup")
         this.toggleOverlay("#overlay-popup", false);
@@ -259,6 +314,7 @@ class App {
   }
 }
 
+// Inicializa o App
 document.addEventListener("DOMContentLoaded", () => {
   new App();
 });

@@ -13,9 +13,14 @@ export const data = {
       "Estou sempre aberto a oportunidades. Sinta-se à vontade para entrar em contato comigo através do email <a href='mailto:david-bitner@hotmail.com'>david-bitner@hotmail.com</a>.",
     ],
   },
-  projects: {
-    project1: {
+
+  projects: [
+    // --- PROJETOS DESTAQUE (Grid Principal) ---
+    {
       id: "project1",
+      highlight: true,
+      title: "30 Projects",
+      imgCover: "project1.png",
       icon: "30projectsIcon.png",
       link: "https://davidbitner.github.io/30-projects/",
       imgs: Array.from({ length: 13 }, (_, i) => `30projects${i + 1}.png`),
@@ -33,8 +38,11 @@ export const data = {
         text: "Uma demonstração abrangente de habilidades. Apresenta efeito matrix em canvas, consumo de múltiplas APIs, CSS/SCSS avançado, integração com Bootstrap e diversas aplicações JavaScript.",
       },
     },
-    project2: {
+    {
       id: "project2",
+      highlight: true,
+      title: "Landings Page",
+      imgCover: "project2.png",
       icon: "landingsPageIcon.png",
       link: "https://davidbitner.github.io/landings-page/",
       imgs: Array.from({ length: 6 }, (_, i) => `landingsPage${i + 1}.png`),
@@ -52,8 +60,11 @@ export const data = {
         text: "Desenvolvido usando conceitos Agile (Sprints, Mapas Mentais). Apresenta animações bezier complexas criando um efeito cinematográfico Ken Burns no banner principal.",
       },
     },
-    project3: {
+    {
       id: "project3",
+      highlight: true,
+      title: "Auto Blog",
+      imgCover: "project3.png",
       icon: "autoBlogIcon.png",
       link: "https://davidbitner.github.io/auto-blog/",
       imgs: ["autoBlog1.png", "autoBlog2.png", "autoBlog3.png"],
@@ -71,8 +82,11 @@ export const data = {
         text: "Utiliza a API Newscatcher para buscar notícias em tempo real baseadas em tópicos e gera automaticamente posts de blog formatados.",
       },
     },
-    project4: {
+    {
       id: "project4",
+      highlight: true,
+      title: "CRUD",
+      imgCover: "project4.png",
       icon: "crudIcon.png",
       link: "https://davidbitner.github.io/crud/",
       imgs: ["crud1.png", "crud2.png", "crud3.png"],
@@ -90,8 +104,11 @@ export const data = {
         text: "Aplicação completa de Create-Read-Update-Delete. Possui interfaces modais para entrada de dados e implementação de LocalStorage para persistência.",
       },
     },
-    project5: {
+    {
       id: "project5",
+      highlight: true,
+      title: "Shapes and colors",
+      imgCover: "project5.png",
       icon: "shapesColorsIcon.png",
       link: "https://davidbitner.github.io/shapes-colors/",
       imgs: Array.from({ length: 5 }, (_, i) => `shapesColors${i + 1}.png`),
@@ -109,8 +126,11 @@ export const data = {
         text: "Sandbox interativo explorando manipulação de containers via coordenadas do mouse e eventos de teclado para alterar formas, cores e dimensões dinamicamente.",
       },
     },
-    project6: {
+    {
       id: "project6",
+      highlight: true,
+      title: "Movie Guide",
+      imgCover: "project6.png",
       icon: "movieGuideIcon.png",
       link: "https://davidbitner.github.io/movie-guide/",
       imgs: ["movieGuide1.png", "movieGuide2.png", "movieGuide3.png"],
@@ -128,18 +148,84 @@ export const data = {
         text: "Mecanismo de busca de filmes integrando com APIs externas para exibir metadados detalhados, avaliações e pôsteres com layout totalmente responsivo.",
       },
     },
-  },
+
+    // --- OUTROS PROJETOS (Modal) ---
+    {
+      id: "other-bcc",
+      highlight: false,
+      title: "Blue Crystal Calculator",
+      link: "https://davidbitner.github.io/blue-crystal-calculator/",
+      imgCover: "projects/bcc.png",
+    },
+    {
+      id: "other-dictionary",
+      highlight: false,
+      title: "Dictionary",
+      link: "https://davidbitner.github.io/dictionary/",
+      imgCover: "projects/dictionary.png",
+    },
+    {
+      id: "other-odp",
+      highlight: false,
+      title: "ODP",
+      link: "https://davidbitner.github.io/odp/",
+      imgCover: "projects/odp.png",
+    },
+    {
+      id: "other-timers",
+      highlight: false,
+      title: "Timers",
+      link: "https://davidbitner.github.io/timers/",
+      imgCover: "projects/timers.png",
+    },
+    {
+      id: "other-login",
+      highlight: false,
+      title: "Login",
+      link: "https://davidbitner.github.io/login/",
+      imgCover: "projects/login.png",
+    },
+    {
+      id: "other-quiz",
+      highlight: false,
+      title: "Quiz APP",
+      link: "https://davidbitner.github.io/quiz-app/",
+      imgCover: "projects/quizApp.png",
+    },
+    {
+      id: "other-slider",
+      highlight: false,
+      title: "Sliders",
+      link: "https://davidbitner.github.io/slider-design/",
+      imgCover: "projects/sliders.png",
+    },
+    {
+      id: "other-list",
+      highlight: false,
+      title: "List",
+      link: "https://davidbitner.github.io/list/",
+      imgCover: "projects/list.png",
+    },
+    {
+      id: "other-despertador",
+      highlight: false,
+      title: "Alarm Clock",
+      link: "https://davidbitner.github.io/despertador/",
+      imgCover: "projects/despertador.png",
+    },
+  ],
+
   education: [
     {
       where: "Transwolff",
       period: "2024 - Current",
       en: {
         title: "Operational Control Center",
-        text: "Responsible for real-time fleet management, camera monitoring, and operational reporting (works, collisions, flooding). Spearheaded the department's digital transformation by identifying bottlenecks in manual processes and implementing automated spreadsheet solutions, significantly increasing data reliability and operational efficiency.",
+        text: "Responsible for real-time fleet management, camera monitoring, and comprehensive reporting across diverse operational areas and guidelines. Spearheaded the department's digital transformation by identifying bottlenecks in manual processes and implementing automated spreadsheet solutions, significantly increasing data reliability and operational efficiency.",
       },
       pt: {
         title: "Centro de Controle Operacional",
-        text: "Responsável pela gestão de frota em tempo real, monitoramento de câmeras e elaboração de relatórios de ocorrências (obras, colisões, alagamentos). Liderei a transformação digital do setor identificando gargalos em processos manuais e implementando automações em planilhas, aumentando significativamente a confiabilidade dos dados e a eficiência operacional.",
+        text: "Responsável pela gestão de frota em tempo real, monitoramento de câmeras e elaboração de relatórios abrangentes de diversas áreas e diretrizes operacionais. Liderei a transformação digital do setor identificando gargalos em processos manuais e implementando automações em planilhas, aumentando significativamente a confiabilidade dos dados e a eficiência operacional.",
       },
     },
     {
