@@ -1,15 +1,4 @@
-@import "variables";
-@import "mixins";
-@import "complements";
-@import "animations";
-
+@import "abstracts";
 @import "base";
-@import "header";
-@import "about";
-@import "projects";
-@import "education";
-@import "skills";
-@import "footer";
-@import "popup";
-@import "modal";
-@import "contact";
+@import "sections";
+@import "overlays";

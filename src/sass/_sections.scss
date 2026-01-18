@@ -1,0 +1,336 @@
+// -----------------------------------------------------------------------------
+// HEADER
+// -----------------------------------------------------------------------------
+.header {
+  padding: $padding-size;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: min-content;
+  align-content: center;
+
+  &__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    animation: backgroundHeaderAnimation 20s ease-in-out 0s infinite alternate
+      forwards;
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("../img/background.png");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__content {
+    z-index: 1;
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    gap: $gap;
+    align-content: center;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 6rem;
+  }
+  &__subtitle {
+    font-size: 4rem;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// PROJECTS (Grid & Card)
+// -----------------------------------------------------------------------------
+.projects {
+  &__grid {
+    display: grid;
+    padding: $padding-size;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $gap;
+    font-size: $font-normal;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__btn {
+    padding: $padding-size;
+    grid-column: 2/3;
+    @include respond(phone) {
+      grid-column: 1/2;
+    }
+  }
+}
+
+.project {
+  background-color: $color-black;
+  padding: $padding-size;
+  height: 40rem;
+  color: $color-white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: none;
+  cursor: pointer;
+  position: relative;
+  border-radius: $border-radius;
+
+  &__text {
+    z-index: 1;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 0;
+    transition: opacity 500ms ease 0s;
+    border-radius: $border-radius;
+    @include respond(tab-land) {
+      opacity: 20%;
+    }
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 20px $color-primary;
+    img {
+      opacity: 40%;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// ABOUT
+// -----------------------------------------------------------------------------
+.about {
+  &__grid {
+    display: grid;
+    gap: $gap;
+    font-size: 2rem;
+    padding: $padding-size;
+    text-align: justify;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// EDUCATION
+// -----------------------------------------------------------------------------
+.education {
+  font-size: $font-normal;
+
+  &__grid {
+    padding: $padding-size;
+    display: grid;
+    gap: $gap-big;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: $gap-small;
+    @include respond(phone) {
+      column-gap: $gap;
+    }
+  }
+
+  &__where,
+  &__title {
+    font-weight: bold;
+    color: $color-primary;
+  }
+
+  &__period,
+  &__text {
+    font-size: 1.8rem;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// SKILLS
+// -----------------------------------------------------------------------------
+.skills {
+  &__grid {
+    padding: $padding-size;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $gap;
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  .separator {
+    grid-column: 1/3;
+    margin: $padding-size 0;
+    @include respond(phone) {
+      grid-column: 1/2;
+    }
+  }
+}
+
+.list {
+  padding: 0 0 1.5rem 1.5rem;
+  list-style: none;
+
+  &__item {
+    font-size: 2rem;
+    color: #dedede;
+
+    &::before {
+      content: "\2022";
+      color: $color-primary;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1rem;
+    }
+  }
+}
+
+.github {
+  display: grid;
+  grid-column: 1/3;
+  justify-self: center;
+  padding: $padding-size;
+  text-align: center;
+  @include respond(phone) {
+    grid-column: 1/2;
+  }
+
+  &__text {
+    font-style: italic;
+    font-size: $font-small;
+  }
+  &__btn {
+    font-size: 1rem;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// CONTACT
+// -----------------------------------------------------------------------------
+.contact {
+  & .title {
+    height: 40rem;
+    &__text {
+      text-shadow: none;
+      pointer-events: all;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    z-index: -10;
+  }
+
+  &__list {
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    &--item {
+      list-style: none;
+      &:nth-child(1) a:hover:before {
+        background: #0077b5;
+      }
+      &:nth-child(2) a:hover:before {
+        background: $color-primary;
+      }
+      &:nth-child(3) a:hover:before {
+        background: $color-white;
+      }
+    }
+
+    &--link {
+      display: inline-flex;
+      font-size: 8rem;
+      text-decoration: none;
+      color: $color-white;
+      width: 20rem;
+      height: 20rem;
+      transition: 0.5s linear;
+      position: relative;
+      z-index: 1;
+      margin: auto;
+
+      @include respond(phone) {
+        width: 10rem;
+        height: 10rem;
+        font-size: 4rem;
+      }
+
+      &:hover {
+        color: $color-white;
+        &::before {
+          transform: scale(1);
+        }
+      }
+
+      & i {
+        margin: auto;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 20rem;
+        height: 20rem;
+        background: #000;
+        border-radius: 50%;
+        z-index: -1;
+        transform: scale(0);
+        transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
+
+        @include respond(phone) {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// FOOTER
+// -----------------------------------------------------------------------------
+.footer {
+  display: grid;
+  background-color: $color-black;
+  color: $color-white;
+  justify-items: center;
+  font-size: 2rem;
+  padding: $padding-size;
+  transition: all 0.2s;
+}

@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// VARIABLES
+// -----------------------------------------------------------------------------
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+// Colors
+$color-primary: #a9a9a9;
+$color-gray-light-1: #f7f7f7;
+$color-gray-light-2: #eee;
+$color-gray-light-3: #dedede;
+$color-gray-dark-1: #999;
+$color-gray-dark-2: #333;
+
+$color-white: #fff;
+$color-white-transparent: rgba(255, 255, 255, 0.18);
+$color-black: #000;
+$color-black-transparent: rgba(0, 0, 0, 0.95);
+$color-green: #90ee90;
+
+// Fonts
+$font-primary: "Roboto", sans-serif;
+$font-small: 1.5rem;
+$font-normal: 2rem;
+$font-big: 2.5rem;
+
+// Shadows
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+$shadow-white: 0 0 10px #333;
+$shadow-white-big: 0 0 20px #333;
+
+// Layout
+$gap: 2rem;
+$gap-small: 1rem;
+$gap-big: 4rem;
+$padding-size: 4rem;
+$padding-small: 2rem;
+$padding-big: 6rem;
+$border-radius: 0.5rem;
+$border-radius-big: 2rem;
+
+// -----------------------------------------------------------------------------
+// MIXINS
+// -----------------------------------------------------------------------------
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } // 600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } // 900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } // 1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } // 1800px
+  }
+}
