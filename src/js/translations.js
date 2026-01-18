@@ -3,7 +3,7 @@ export const translations = {
     titles: {
       projects: "My Projects",
       about: "About me",
-      education: "Education",
+      education: "My Journey",
       skills: "Skills",
       contact: "Contact",
     },
@@ -22,7 +22,7 @@ export const translations = {
     titles: {
       projects: "Meus Projetos",
       about: "Sobre Mim",
-      education: "Educação",
+      education: "Minha Jornada",
       skills: "Minhas Skills",
       contact: "Contato",
     },

@@ -134,35 +134,166 @@
 }
 
 // -----------------------------------------------------------------------------
-// EDUCATION
+// TRAJECTORY (Zig-Zag Timeline with Emphasis)
 // -----------------------------------------------------------------------------
 .education {
   font-size: $font-normal;
+  overflow-x: hidden;
 
   &__grid {
-    padding: $padding-size;
-    display: grid;
-    gap: $gap-big;
-  }
+    padding: $padding-size 0;
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto;
 
-  &__item {
-    display: grid;
-    grid-template-columns: 25% 1fr;
-    gap: $gap-small;
-    @include respond(phone) {
-      column-gap: $gap;
+    // A Linha Central Vertical
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background-color: rgba($color-primary, 0.3);
+      transform: translateX(-50%);
+
+      @include respond(tab-port) {
+        left: 3rem;
+      }
     }
   }
 
-  &__where,
-  &__title {
-    font-weight: bold;
-    color: $color-primary;
+  &__item {
+    position: relative;
+    width: 50%;
+    padding: 0 4rem;
+    margin-bottom: 4rem;
+    box-sizing: border-box;
+
+    // A Bolinha Padrão
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1.5rem;
+      width: 2rem;
+      height: 2rem;
+      background-color: $color-black;
+      border: 3px solid $color-primary;
+      border-radius: 50%;
+      z-index: 1;
+      transition: all 0.3s;
+    }
+
+    &:hover::after {
+      background-color: $color-primary;
+      transform: scale(1.3);
+    }
+
+    // --- POSICIONAMENTO ZIG-ZAG ---
+
+    &:nth-child(odd) {
+      left: 0;
+      text-align: right;
+      &::after {
+        right: -1.1rem;
+      }
+    }
+
+    &:nth-child(even) {
+      left: 50%;
+      text-align: left;
+      &::after {
+        left: -1.1rem;
+      }
+    }
+
+    // --- DESTAQUES (Trabalho Atual & Bachelor) ---
+    // 1º Item (Transwolff) e 4º Item (Faculdade)
+    &:nth-child(1),
+    &:nth-child(4) {
+      // Bolinha Maior e Verde
+      &::after {
+        width: 3rem;
+        height: 3rem;
+        border-color: $color-green; // Destaque visual
+        top: 1rem;
+      }
+
+      // Ajuste fino da posição da bolinha maior
+      &:nth-child(odd)::after {
+        right: -1.6rem;
+      } // Ajuste para esquerda
+      &:nth-child(even)::after {
+        left: -1.6rem;
+      } // Ajuste para direita
+
+      // Título Maior
+      .education__title {
+        font-size: 2.6rem; // Maior que o padrão 2.2rem
+        color: $color-green; // Texto também ganha cor de destaque
+        text-shadow: 0 0 10px rgba($color-green, 0.2);
+      }
+    }
+
+    // --- RESPONSIVIDADE ---
+    @include respond(tab-port) {
+      width: 100%;
+      padding-left: 6rem;
+      padding-right: 2rem;
+      left: 0 !important;
+      text-align: left !important;
+
+      &:nth-child(odd)::after,
+      &:nth-child(even)::after {
+        left: 2rem;
+        right: auto;
+      }
+
+      // Ajuste dos destaques no Mobile
+      &:nth-child(1)::after,
+      &:nth-child(4)::after {
+        left: 1.5rem; // Centraliza a bolinha maior na linha
+      }
+    }
   }
 
-  &__period,
+  // --- TEXTOS ---
+  &__period {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-black;
+    background-color: $color-primary;
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $color-white;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    transition: all 0.3s;
+  }
+
+  &__where {
+    font-size: 1.6rem;
+    font-style: italic;
+    color: rgba($color-white, 0.7);
+    margin-bottom: 1.5rem;
+    display: block;
+    &::before {
+      content: "@ ";
+      color: $color-primary;
+    }
+  }
+
   &__text {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    color: rgba($color-white, 0.8);
+    line-height: 1.6;
   }
 }
 
@@ -194,20 +325,33 @@
 }
 
 .list {
-  padding: 0 0 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
   list-style: none;
+  margin-left: -0.5rem;
+  margin-bottom: 4rem;
 
   &__item {
-    font-size: 2rem;
-    color: #dedede;
+    font-size: 1.6rem;
+    color: $color-white;
+    background-color: rgba($color-primary, 0.1);
+    border: 1px solid $color-primary;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    margin: 0.5rem;
+    transition: all 0.3s;
+    cursor: default;
 
     &::before {
-      content: "\2022";
-      color: $color-primary;
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-left: -1rem;
+      content: none;
+    }
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-black;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba($color-primary, 0.4);
     }
   }
 }
@@ -218,6 +362,7 @@
   justify-self: center;
   padding: $padding-size;
   text-align: center;
+  z-index: 1;
   @include respond(phone) {
     grid-column: 1/2;
   }
@@ -236,10 +381,13 @@
 // -----------------------------------------------------------------------------
 .contact {
   & .title {
-    height: 40rem;
+    height: 30rem; // Reduzido de 40rem para 30rem
+
+    // Remove o pointer-events do título para permitir clicar nos ícones
     &__text {
       text-shadow: none;
       pointer-events: all;
+      width: 100%; // Garante que centralize corretamente
     }
   }
 
@@ -248,16 +396,19 @@
     align-items: center;
     justify-content: center;
     background: transparent;
-    z-index: -10;
+    z-index: 10; // Corrigido Z-index para garantir clique
   }
 
   &__list {
     padding: 0 1.5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; // Centraliza a lista
+    gap: 3rem; // Espaço entre os ícones
+    width: 100%;
 
     &--item {
       list-style: none;
+      // Mantém os hovers de cores originais
       &:nth-child(1) a:hover:before {
         background: #0077b5;
       }
@@ -271,19 +422,21 @@
 
     &--link {
       display: inline-flex;
-      font-size: 8rem;
+      font-size: 6rem; // Reduzido levemente para elegância (era 8rem)
       text-decoration: none;
       color: $color-white;
-      width: 20rem;
-      height: 20rem;
+      width: 12rem; // Reduzido para o círculo ficar mais justo (era 20rem)
+      height: 12rem; // Reduzido (era 20rem)
       transition: 0.5s linear;
       position: relative;
       z-index: 1;
       margin: auto;
+      align-items: center; // Centraliza o ícone no círculo
+      justify-content: center;
 
       @include respond(phone) {
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         font-size: 4rem;
       }
 
@@ -294,10 +447,7 @@
         }
       }
 
-      & i {
-        margin: auto;
-      }
-
+      // O Círculo animado do fundo
       &::before {
         content: "";
         position: absolute;
@@ -305,19 +455,33 @@
         left: 0;
         right: 0;
         bottom: 0;
-        width: 20rem;
-        height: 20rem;
+        width: 100%;
+        height: 100%;
         background: #000;
         border-radius: 50%;
         z-index: -1;
         transform: scale(0);
         transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
-
-        @include respond(phone) {
-          width: 10rem;
-          height: 10rem;
-        }
       }
+    }
+  }
+  #title5 {
+    height: 49rem;
+
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .particles-js-canvas-el {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: auto !important;
+      z-index: -1;
     }
   }
 }

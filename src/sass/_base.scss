@@ -54,7 +54,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 99vh repeat(5, min-content);
+  grid-template-rows: 99vh;
+  grid-auto-rows: min-content;
   grid-template-columns: 1fr;
 }
 
