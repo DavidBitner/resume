@@ -61,25 +61,31 @@ export const data = {
       },
     },
     {
-      id: "project3",
+      id: "project3", // Mantém o ID para ficar na mesma posição (3º lugar)
       highlight: true,
-      title: "Auto Blog",
-      imgCover: "project3.png",
-      icon: "autoBlogIcon.png",
-      link: "https://davidbitner.github.io/auto-blog/",
-      imgs: ["autoBlog1.png", "autoBlog2.png", "autoBlog3.png"],
-      color: "#886a84",
+      title: "Cruzadox",
+      imgCover: "project3.png", // Certifique-se de substituir a imagem na pasta src/img/
+      icon: "crosswordIcon.png", // Adicione um ícone ou use um genérico
+      link: "https://davidbitner.github.io/palavras-cruzadas-de-encaixe/",
+      // Adicione prints do projeto aqui para o carrossel do popup
+      imgs: ["cruzadox1.png", "cruzadox2.png"],
+      color: "#2c3e50", // A cor azul escura usada no CSS do projeto
       en: {
-        title: "Auto Blog",
-        subtitle: "Automated content generation platform.",
-        highlights: ["Newscatcher API", "Async/Await", "DOM Manipulation"],
-        text: "Uses the Newscatcher API to fetch real-time news based on topics and automatically generates formatted blog posts.",
+        title: "Cruzadox Generator",
+        subtitle: "Fit-word puzzle generator with print layout.",
+        highlights: ["Greedy Algorithm", "Print CSS", "Logic & Math"],
+        text: "A custom tool developed to solve a market gap for specific puzzle types. Features a complex greedy algorithm to calculate the optimal grid layout for any given list of words and a specialized CSS print view for A4 paper output.",
       },
       pt: {
-        title: "Auto Blog",
-        subtitle: "Plataforma de geração automática de conteúdo.",
-        highlights: ["Newscatcher API", "Async/Await", "DOM Manipulation"],
-        text: "Utiliza a API Newscatcher para buscar notícias em tempo real baseadas em tópicos e gera automaticamente posts de blog formatados.",
+        title: "Gerador Cruzadox",
+        subtitle:
+          "Gerador de palavras cruzadas de encaixe pronto para impressão.",
+        highlights: [
+          "Algoritmo Greedy",
+          "CSS de Impressão",
+          "Lógica Matemática",
+        ],
+        text: "Ferramenta desenvolvida para suprir uma escassez de jogos específicos no mercado. Utiliza um algoritmo 'greedy' complexo para calcular o melhor encaixe de grade possível para qualquer lista de palavras e possui layout otimizado para impressão em folha A4.",
       },
     },
     {
@@ -158,6 +164,13 @@ export const data = {
       imgCover: "projects/bcc.png",
     },
     {
+      id: "other-hackerman",
+      highlight: false,
+      title: "Hackerman",
+      link: "https://davidbitner.github.io/hackerman/",
+      imgCover: "projects/hackerman.png",
+    },
+    {
       id: "other-dictionary",
       highlight: false,
       title: "Dictionary",
@@ -193,13 +206,6 @@ export const data = {
       imgCover: "projects/quizApp.png",
     },
     {
-      id: "other-slider",
-      highlight: false,
-      title: "Sliders",
-      link: "https://davidbitner.github.io/slider-design/",
-      imgCover: "projects/sliders.png",
-    },
-    {
       id: "other-list",
       highlight: false,
       title: "List",
@@ -212,6 +218,20 @@ export const data = {
       title: "Alarm Clock",
       link: "https://davidbitner.github.io/despertador/",
       imgCover: "projects/despertador.png",
+    },
+    {
+      id: "other-slider",
+      highlight: false,
+      title: "Sliders",
+      link: "https://davidbitner.github.io/slider-design/",
+      imgCover: "projects/sliders.png",
+    },
+    {
+      id: "other-autoblog",
+      highlight: false,
+      title: "Auto Blog",
+      link: "https://davidbitner.github.io/auto-blog/",
+      imgCover: "projects/autoBlog1.png",
     },
   ],
 
