@@ -1,3 +1,5 @@
+// src/sass/_sections.scss
+
 // -----------------------------------------------------------------------------
 // HEADER
 // -----------------------------------------------------------------------------
@@ -15,8 +17,13 @@
     height: 100%;
     width: 100%;
     z-index: 0;
+
+    // Animação Ken Burns (Zoom lento)
     animation: backgroundHeaderAnimation 20s ease-in-out 0s infinite alternate
       forwards;
+
+    // RESTAURADO: Imagem de fundo com gradiente escuro
+    // Isso vai cobrir as partículas apenas nesta área (o que é ótimo para leitura)
     background:
       linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url("../img/background.png");
@@ -42,37 +49,30 @@
 }
 
 // -----------------------------------------------------------------------------
-// PROJECTS (Flexbox Gallery para centralização perfeita)
+// PROJECTS (Flexbox Gallery)
 // -----------------------------------------------------------------------------
 .projects {
   &__grid {
-    // MUDANÇA 1: Trocamos Grid por Flexbox
     display: flex;
-    flex-wrap: wrap; // Permite quebra de linha automática
-    justify-content: center; // MÁGICA: Centraliza a última linha quando sobram itens
+    flex-wrap: wrap;
+    justify-content: center;
     padding: $padding-size;
     gap: $gap;
     font-size: $font-normal;
   }
 
-  // MUDANÇA 2: Configuração do Botão "More Projects"
   &__btn {
-    // Força o botão a ocupar 100% da largura, jogando-o para uma nova linha sozinho
-    position: relative;
     flex: 1 1 100%;
-    width: 100%;
-    z-index: 1;
-
-    // Altura reduzida (metade de 14rem)
     height: 7rem;
     min-height: 7rem;
-
-    // Centralização do conteúdo do botão
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
 
-    // Estilo Visual
     border: 1px dashed $color-white;
     color: $color-white;
     background: transparent;
@@ -80,11 +80,7 @@
     font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: bold;
-    cursor: pointer;
     transition: all 0.2s;
-
-    // Pequeno espaçamento superior para separar dos cards
-    margin-top: 1rem;
 
     &:hover {
       border-style: solid;
@@ -96,42 +92,31 @@
   }
 }
 
-// src/sass/_sections.scss
-
 .project {
   background-color: $color-black;
   padding: $padding-size;
   height: 14rem;
 
-  // --- A MÁGICA DA CONSISTÊNCIA ---
-  // 1. flex-grow: 0 -> NÃO cresça (mantém o tamanho igual aos outros)
-  // 2. flex-shrink: 0 -> NÃO encolha
-  // 3. flex-basis: CALCULO EXATO usando a variável de gap do seu projeto
-
-  // Desktop: 5 Colunas (4 Gaps)
-  // Conta: (100% de largura - 4 espaços) dividido por 5 cards
+  // 5 Colunas (Desktop)
   flex: 0 0 calc((100% - (4 * #{$gap})) / 5);
   width: calc((100% - (4 * #{$gap})) / 5);
 
-  // Tablet Horizontal: 4 Colunas (3 Gaps)
+  // 4 Colunas (Tablet Horizontal)
   @include respond(tab-land) {
     flex: 0 0 calc((100% - (3 * #{$gap})) / 4);
     width: calc((100% - (3 * #{$gap})) / 4);
   }
-
-  // Tablet Vertical: 2 Colunas (1 Gap)
+  // 2 Colunas (Tablet Vertical)
   @include respond(tab-port) {
     flex: 0 0 calc((100% - #{$gap}) / 2);
     width: calc((100% - #{$gap}) / 2);
   }
-
-  // Celular: 1 Coluna (0 Gaps)
+  // 1 Coluna (Mobile)
   @include respond(phone) {
     flex: 0 0 100%;
     width: 100%;
   }
 
-  // Visual e Interação
   cursor: pointer;
   color: $color-white;
   display: grid;
@@ -144,7 +129,6 @@
   border-radius: $border-radius;
   overflow: hidden;
 
-  // Garante que o texto não quebre o layout
   &__text {
     z-index: 1;
     font-size: 1.8rem;
@@ -168,8 +152,7 @@
   &:hover {
     transform: scale(1.03);
     box-shadow: 0px 0px 20px $color-primary;
-    z-index: 2; // Traz para frente no hover
-
+    z-index: 2;
     & .project__img {
       opacity: 0.6;
     }
@@ -179,24 +162,21 @@
 // -----------------------------------------------------------------------------
 // ABOUT
 // -----------------------------------------------------------------------------
-.about {
-  &__grid {
-    display: grid;
-    gap: $gap;
-    font-size: 2rem;
-    padding: $padding-size;
-    text-align: justify;
-
-    a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.about__grid {
+  display: grid;
+  gap: $gap;
+  font-size: 2rem;
+  padding: $padding-size;
+  text-align: justify;
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
   }
 }
 
 // -----------------------------------------------------------------------------
-// TRAJECTORY (Zig-Zag Timeline with Emphasis)
+// TRAJECTORY (Unified Color Scheme)
 // -----------------------------------------------------------------------------
 .education {
   font-size: $font-normal;
@@ -208,7 +188,7 @@
     max-width: 100rem;
     margin: 0 auto;
 
-    // A Linha Central Vertical
+    // Linha Central
     &::before {
       content: "";
       position: absolute;
@@ -218,7 +198,6 @@
       width: 2px;
       background-color: rgba($color-primary, 0.3);
       transform: translateX(-50%);
-
       @include respond(tab-port) {
         left: 3rem;
       }
@@ -232,7 +211,7 @@
     margin-bottom: 4rem;
     box-sizing: border-box;
 
-    // A Bolinha Padrão
+    // Bolinha Padrão
     &::after {
       content: "";
       position: absolute;
@@ -251,8 +230,7 @@
       transform: scale(1.3);
     }
 
-    // --- POSICIONAMENTO ZIG-ZAG ---
-
+    // Zig-Zag Layout
     &:nth-child(odd) {
       left: 0;
       text-align: right;
@@ -260,7 +238,6 @@
         right: -1.1rem;
       }
     }
-
     &:nth-child(even) {
       left: 50%;
       text-align: left;
@@ -269,27 +246,21 @@
       }
     }
 
-    // --- DESTAQUES (Trabalho Atual & Bachelor) ---
-    // 1º Item (Transwolff) e 4º Item (Faculdade)
+    // Destaques (Atual & Bachelor)
     &:nth-child(1),
     &:nth-child(4) {
-      // Bolinha Maior (Destaque por tamanho, mantendo a cor do tema)
       &::after {
         width: 3rem;
         height: 3rem;
-        border-color: $color-primary; // <--- MUDANÇA: Era $color-green
-        box-shadow: 0 0 15px rgba($color-primary, 0.4); // Adicionei um brilho extra
+        border-color: $color-primary;
+        box-shadow: 0 0 15px rgba($color-primary, 0.4);
         top: 1rem;
       }
-
-      // Título Maior
       .education__title {
         font-size: 2.6rem;
-        color: $color-primary; // <--- MUDANÇA: Era $color-green
+        color: $color-primary;
         text-shadow: 0 0 10px rgba($color-primary, 0.2);
       }
-
-      // Ajustes de posição (mantidos iguais)
       &:nth-child(odd)::after {
         right: -1.6rem;
       }
@@ -304,29 +275,20 @@
       }
     }
 
-    // --- RESPONSIVIDADE ---
     @include respond(tab-port) {
       width: 100%;
       padding-left: 6rem;
       padding-right: 2rem;
       left: 0 !important;
       text-align: left !important;
-
       &:nth-child(odd)::after,
       &:nth-child(even)::after {
         left: 2rem;
         right: auto;
       }
-
-      // Ajuste dos destaques no Mobile
-      &:nth-child(1)::after,
-      &:nth-child(4)::after {
-        left: 1.5rem; // Centraliza a bolinha maior na linha
-      }
     }
   }
 
-  // --- TEXTOS ---
   &__period {
     display: inline-block;
     font-size: 1.4rem;
@@ -337,16 +299,13 @@
     border-radius: 20px;
     margin-bottom: 1rem;
   }
-
   &__title {
     font-size: 2.2rem;
     font-weight: 700;
     color: $color-white;
     margin-bottom: 0.5rem;
     line-height: 1.2;
-    transition: all 0.3s;
   }
-
   &__where {
     font-size: 1.6rem;
     font-style: italic;
@@ -358,7 +317,6 @@
       color: $color-primary;
     }
   }
-
   &__text {
     font-size: 1.6rem;
     color: rgba($color-white, 0.8);
@@ -379,11 +337,9 @@
       grid-template-columns: 1fr;
     }
   }
-
   &__title {
     font-size: 2.5rem;
   }
-
   .separator {
     grid-column: 1/3;
     margin: $padding-size 0;
@@ -412,10 +368,6 @@
     transition: all 0.3s;
     cursor: default;
 
-    &::before {
-      content: none;
-    }
-
     &:hover {
       background-color: $color-primary;
       color: $color-black;
@@ -435,7 +387,6 @@
   @include respond(phone) {
     grid-column: 1/2;
   }
-
   &__text {
     font-style: italic;
     font-size: $font-small;
@@ -449,55 +400,48 @@
 // CONTACT
 // -----------------------------------------------------------------------------
 .contact {
-  & .title {
-    height: 30rem; // Reduzido de 40rem para 30rem
+  // 1. COR DE FUNDO: Preto (Igual ao Footer e Cards)
+  background-color: rgba(0, 0, 0, 0.8);
 
-    // Remove o pointer-events do título para permitir clicar nos ícones
-    &__text {
-      text-shadow: none;
-      pointer-events: all;
-      width: 100%; // Garante que centralize corretamente
-    }
-  }
+  // 2. ALTURA: Define uma altura mínima para dar "ar" e destaque
+  min-height: 40rem;
+
+  // Centralização
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: $padding-size 0;
+  position: relative;
+  z-index: 10;
+
+  // Sombra sutil no topo para separar do conteúdo azul
+  box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.5);
 
   &__grid {
     display: flex;
     align-items: center;
     justify-content: center;
     background: transparent;
-    z-index: 10; // Corrigido Z-index para garantir clique
+    width: 100%;
   }
 
-  // src/sass/_sections.scss
-
   &__list {
-    padding: 0 1.5rem;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: 3rem;
-    width: 100%;
 
-    &--item {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6rem; // Aumentei um pouco o gap para ficar mais elegante
       list-style: none;
+      padding: 0;
+      margin: 0;
 
-      // LinkedIn (Azul)
-      &:nth-child(1) a:hover:before {
-        background: #0077b5;
-      }
-
-      // Email (Cinza/Primary)
-      &:nth-child(2) a:hover:before {
-        background: $color-primary;
-      }
-
-      // GitHub (Branco) - AQUI ESTAVA O PROBLEMA
-      &:nth-child(3) {
-        a:hover {
-          color: $color-black; // <--- CORREÇÃO: Ícone vira PRETO no hover
-          &::before {
-            background: $color-white; // Fundo vira Branco
-          }
-        }
+      @include respond(phone) {
+        gap: 3rem;
       }
     }
 
@@ -511,9 +455,14 @@
       transition: 0.5s linear;
       position: relative;
       z-index: 1;
-      margin: auto;
       align-items: center;
       justify-content: center;
+
+      // Garante que o ícone fique centralizado no círculo
+      & i {
+        position: relative;
+        z-index: 2;
+      }
 
       @include respond(phone) {
         width: 8rem;
@@ -522,13 +471,27 @@
       }
 
       &:hover {
-        color: $color-white; // Padrão para os outros ícones
+        color: $color-white;
         &::before {
           transform: scale(1);
         }
       }
 
-      // O Círculo animado do fundo
+      // Cores específicas (Hover)
+      &.linkedin__icon:hover::before {
+        background: #0077b5;
+      }
+      &.email__icon:hover::before {
+        background: $color-primary;
+      }
+      &.github__icon:hover {
+        color: $color-black;
+        &::before {
+          background: $color-white;
+        }
+      }
+
+      // Círculo animado
       &::before {
         content: "";
         position: absolute;
@@ -538,32 +501,17 @@
         bottom: 0;
         width: 100%;
         height: 100%;
-        background: #000;
+        background: $color-gray-dark-2; // Fundo cinza escuro no círculo "inativo" para destacar no fundo preto
         border-radius: 50%;
         z-index: -1;
-        transform: scale(0);
+        transform: scale(
+          0
+        ); // Começa invisível (ou mude para scale(1) se quiser que as bolinhas sempre apareçam)
         transition: 0.3s cubic-bezier(0.95, 0.32, 0.37, 1.21);
       }
-    }
-  }
 
-  #title5 {
-    height: 49rem;
-
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    & .particles-js-canvas-el {
-      position: absolute !important;
-      top: 0;
-      left: 0;
-      width: 100% !important;
-      height: auto !important;
-      z-index: -1;
+      // Se você quiser que as bolinhas cinzas apareçam SEMPRE (não só no hover),
+      // mude o transform acima para scale(1) e use uma cor como $color-gray-dark-2
     }
   }
 }

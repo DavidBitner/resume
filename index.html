@@ -23,111 +23,104 @@
     <script defer type="module" src="src/js/script.js"></script>
   </head>
   <body>
+    <div id="global-particles"></div>
+
     <div class="container">
       <header class="header">
         <div class="header__background"></div>
         <div class="header__content">
-          <h1 class="header__title" data-i18n="header.title">David Bitner</h1>
-          <h2 class="header__subtitle" data-i18n="header.subtitle">
-            Interactive Resumé
-          </h2>
+          <h1 class="header__title">David Bitner</h1>
+          <h2 class="header__subtitle">Web Developer</h2>
         </div>
       </header>
 
       <section class="projects">
-        <div id="title1" class="title">
-          <div class="title__text" data-i18n="titles.projects">My Projects</div>
+        <div class="title" id="title1">
+          <div class="title__text">My Projects</div>
         </div>
         <div class="projects__grid"></div>
       </section>
 
       <section class="about">
-        <div id="title2" class="title">
-          <div class="title__text" data-i18n="titles.about">About me</div>
+        <div class="title" id="title2">
+          <div class="title__text">About me</div>
         </div>
         <div class="about__grid"></div>
       </section>
 
       <section class="education">
-        <div id="title3" class="title">
-          <div class="title__text" data-i18n="titles.education">Education</div>
+        <div class="title" id="title3">
+          <div class="title__text">My Journey</div>
         </div>
         <div class="education__grid"></div>
       </section>
 
       <section class="skills">
-        <div id="title4" class="title">
-          <div class="title__text" data-i18n="titles.skills">Skills</div>
+        <div class="title" id="title4">
+          <div class="title__text">Skills</div>
         </div>
         <div class="skills__grid">
-          <div class="skills__grid--column">
-            <div class="skills__title" data-i18n="labels.techTitle">
-              Main Languages and Technologies
-            </div>
+          <div>
+            <h3 class="skills__title">Main Languages and Technologies</h3>
+            <div class="separator"></div>
             <ul class="list" id="list-tech"></ul>
-
-            <div class="skills__title" data-i18n="labels.toolsTitle">
-              Most Used Tools
-            </div>
+          </div>
+          <div>
+            <h3 class="skills__title">Most Used Tools</h3>
+            <div class="separator"></div>
             <ul class="list" id="list-tools"></ul>
           </div>
-
-          <div class="skills__grid--column">
-            <div class="skills__title" data-i18n="labels.softTitle">
-              Soft Skills
-            </div>
+          <div>
+            <h3 class="skills__title">Soft Skills</h3>
+            <div class="separator"></div>
             <ul class="list" id="list-soft"></ul>
-
-            <div class="skills__title" data-i18n="labels.langTitle">
-              Languages
-            </div>
+          </div>
+          <div>
+            <h3 class="skills__title">Languages</h3>
+            <div class="separator"></div>
             <ul class="list" id="list-lang"></ul>
           </div>
-
-          <div class="separator"></div>
-
           <div class="github">
-            <div class="github__text">Project built in vanilla JavaScript.</div>
+            <h3 class="skills__title github__text">
+              Check out my projects on GitHub!
+            </h3>
             <a
-              href="https://github.com/DavidBitner/resume"
-              class="github__btn btn"
               target="_blank"
-              data-i18n="buttons.github"
+              href="https://github.com/DavidBitner"
+              class="btn github__btn"
+              >See project on GitHub</a
             >
-              See project on GitHub
-            </a>
           </div>
         </div>
       </section>
 
       <section class="contact">
-        <div id="title5" class="title">
-          <div class="title__text">
-            <div class="contact__grid">
-              <ul class="contact__list">
-                <li class="contact__list--item">
+        <div class="contact__grid">
+          <div class="contact__content">
+            <div class="contact__list">
+              <ul>
+                <li>
                   <a
-                    href="https://www.linkedin.com/in/david-bitner/"
                     target="_blank"
-                    class="contact__list--link"
+                    href="https://www.linkedin.com/in/david-bitner-863196144/"
+                    class="contact__list--link linkedin__icon"
                   >
-                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
                   </a>
                 </li>
-                <li class="contact__list--item">
+                <li>
                   <a
                     href="mailto:david-bitner@hotmail.com"
-                    class="contact__list--link"
+                    class="contact__list--link email__icon"
                   >
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <i class="fa-regular fa-envelope"></i>
                   </a>
                 </li>
-                <li class="contact__list--item">
+                <li>
                   <a
-                    href="https://github.com/DavidBitner"
                     target="_blank"
-                    class="contact__list--link"
-                    id="github-icon"
+                    href="https://github.com/DavidBitner"
+                    class="contact__list--link github__icon"
                   >
                     <i class="fa-brands fa-github"></i>
                   </a>
@@ -175,7 +168,7 @@
       </button>
 
       <footer class="footer">
-        <div class="footer__text" data-i18n="labels.footer">By Bitner</div>
+        <div class="footer__text">By Bitner</div>
       </footer>
     </div>
   </body>
