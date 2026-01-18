@@ -2,20 +2,43 @@ export const data = {
   about: {
     en: [
       "Web Developer focused on creating scalable solutions and performant interfaces. Specialist in transforming complex requirements into clean, maintainable code.",
-      "As a professional, I maintain a high level of dedication, taking full responsibility for my work. I employ an analytical approach to troubleshooting, focusing on performance optimization and UX.",
-      "In addition to my passion for technology, I am an enthusiast of nerd culture. This interest enriches my creativity and has been instrumental in connecting with people worldwide.",
+      "I have a genuine passion for optimizing workflows. I thrive on taking repetitive, tedious processes and engineering automated solutions for them. For me, improving efficiency isn't just work; it's a challenge I enjoy, turning potential drudgery into opportunities for innovation.",
+      "My curiosity goes beyond code. As a dedicated enthusiast of nerd culture, I taught myself English to access content and communities that were unavailable locally. This drive to overcome barriers defines how I approach every new technology or problem.",
       "I am always open to opportunities. Feel free to contact me via email at <a href='mailto:david-bitner@hotmail.com'>david-bitner@hotmail.com</a>.",
     ],
     pt: [
       "Desenvolvedor Web focado em criar soluções escaláveis e interfaces performáticas. Especialista em transformar requisitos complexos em código limpo e manutenível.",
-      "Como profissional, mantenho um alto nível de dedicação, assumindo total responsabilidade pelo meu trabalho. Utilizo uma abordagem analítica para resolução de problemas, focando em otimização de performance e UX.",
-      "Além da minha paixão por tecnologia, sou um entusiasta da cultura nerd. Esse interesse enriquece minha criatividade e tem sido fundamental para criar conexões com pessoas ao redor do mundo.",
+      "Tenho uma paixão genuína por otimizar fluxos de trabalho. Adoro pegar processos repetitivos e maçantes e criar soluções automatizadas para eles. Para mim, melhorar a eficiência não é apenas trabalho; é um desafio divertido, transformando tarefas tediosas em oportunidades de inovação.",
+      "Minha curiosidade vai além do código. Como um entusiasta da cultura nerd, aprendi inglês sozinho para acessar conteúdos e comunidades que eram inacessíveis localmente. Essa vontade de superar barreiras define como abordo cada nova tecnologia ou problema.",
       "Estou sempre aberto a oportunidades. Sinta-se à vontade para entrar em contato comigo através do email <a href='mailto:david-bitner@hotmail.com'>david-bitner@hotmail.com</a>.",
     ],
   },
 
   projects: [
     // --- PROJETOS DESTAQUE (Grid Principal) ---
+    {
+      id: "project-lobotrans",
+      highlight: true,
+      title: "Lobotrans",
+      imgCover: "projects/lobotrans.png", // Tire um print da tela inicial (o menu com os botões)
+      icon: "lobotransIcon.png", // Pode usar o logo.png que vi na pasta do projeto
+      link: "https://davidbitner-lobotrans.vercel.app",
+      imgs: ["lobotrans1.png", "lobotrans2.png", "lobotrans3.png"], // Prints: 1. Menu, 2. Form de Acidentes
+      color: "#0f3460",
+      en: {
+        title: "Lobotrans Automation Suite",
+        subtitle: "Corporate internal tooling for operational efficiency.",
+        highlights: ["Node.js", "Docx Automation", "Process Optimization"],
+        text: "A production-grade suite of tools I developed for Transwolff. It automates the generation of complex accident and occurrence reports. By converting manual Word processing into structured web forms, I reduced the reporting time by ~70% and ensured data consistency across the department. Used daily by the operational team.",
+      },
+      pt: {
+        title: "Suíte de Automação Lobotrans",
+        subtitle:
+          "Ferramentas internas corporativas para eficiência operacional.",
+        highlights: ["Node.js", "Automação Docx", "Otimização de Processos"],
+        text: "Uma suíte de ferramentas em produção que desenvolvi para a Transwolff. Automatiza a geração de relatórios complexos de acidentes e ocorrências. Ao converter a edição manual de Word em formulários web estruturados, reduzi o tempo de relatório em ~70% e garanti a consistência dos dados em todo o departamento. Uso diário pela equipe operacional.",
+      },
+    },
     {
       id: "project1",
       highlight: true,
@@ -225,13 +248,6 @@ export const data = {
       title: "Sliders",
       link: "https://davidbitner.github.io/slider-design/",
       imgCover: "projects/sliders.png",
-    },
-    {
-      id: "other-autoblog",
-      highlight: false,
-      title: "Auto Blog",
-      link: "https://davidbitner.github.io/auto-blog/",
-      imgCover: "projects/autoBlog1.png",
     },
   ],
 

@@ -42,34 +42,97 @@
 }
 
 // -----------------------------------------------------------------------------
-// PROJECTS (Grid & Card)
+// PROJECTS (Flexbox Gallery para centralização perfeita)
 // -----------------------------------------------------------------------------
 .projects {
   &__grid {
-    display: grid;
+    // MUDANÇA 1: Trocamos Grid por Flexbox
+    display: flex;
+    flex-wrap: wrap; // Permite quebra de linha automática
+    justify-content: center; // MÁGICA: Centraliza a última linha quando sobram itens
     padding: $padding-size;
-    grid-template-columns: repeat(3, 1fr);
     gap: $gap;
     font-size: $font-normal;
-
-    @include respond(phone) {
-      grid-template-columns: 1fr;
-    }
   }
 
+  // MUDANÇA 2: Configuração do Botão "More Projects"
   &__btn {
-    padding: $padding-size;
-    grid-column: 2/3;
-    @include respond(phone) {
-      grid-column: 1/2;
+    // Força o botão a ocupar 100% da largura, jogando-o para uma nova linha sozinho
+    position: relative;
+    flex: 1 1 100%;
+    width: 100%;
+    z-index: 1;
+
+    // Altura reduzida (metade de 14rem)
+    height: 7rem;
+    min-height: 7rem;
+
+    // Centralização do conteúdo do botão
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // Estilo Visual
+    border: 1px dashed $color-white;
+    color: $color-white;
+    background: transparent;
+    box-shadow: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    // Pequeno espaçamento superior para separar dos cards
+    margin-top: 1rem;
+
+    &:hover {
+      border-style: solid;
+      border-color: $color-primary;
+      color: $color-primary;
+      box-shadow: 0 0 15px rgba($color-primary, 0.3);
+      transform: translateY(-3px);
     }
   }
 }
 
+// src/sass/_sections.scss
+
 .project {
   background-color: $color-black;
   padding: $padding-size;
-  height: 40rem;
+  height: 14rem;
+
+  // --- A MÁGICA DA CONSISTÊNCIA ---
+  // 1. flex-grow: 0 -> NÃO cresça (mantém o tamanho igual aos outros)
+  // 2. flex-shrink: 0 -> NÃO encolha
+  // 3. flex-basis: CALCULO EXATO usando a variável de gap do seu projeto
+
+  // Desktop: 5 Colunas (4 Gaps)
+  // Conta: (100% de largura - 4 espaços) dividido por 5 cards
+  flex: 0 0 calc((100% - (4 * #{$gap})) / 5);
+  width: calc((100% - (4 * #{$gap})) / 5);
+
+  // Tablet Horizontal: 4 Colunas (3 Gaps)
+  @include respond(tab-land) {
+    flex: 0 0 calc((100% - (3 * #{$gap})) / 4);
+    width: calc((100% - (3 * #{$gap})) / 4);
+  }
+
+  // Tablet Vertical: 2 Colunas (1 Gap)
+  @include respond(tab-port) {
+    flex: 0 0 calc((100% - #{$gap}) / 2);
+    width: calc((100% - #{$gap}) / 2);
+  }
+
+  // Celular: 1 Coluna (0 Gaps)
+  @include respond(phone) {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+
+  // Visual e Interação
+  cursor: pointer;
   color: $color-white;
   display: grid;
   justify-content: center;
@@ -77,39 +140,38 @@
   text-align: center;
   transition: all 0.2s;
   text-transform: uppercase;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: none;
-  cursor: pointer;
   position: relative;
   border-radius: $border-radius;
+  overflow: hidden;
 
+  // Garante que o texto não quebre o layout
   &__text {
     z-index: 1;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
   }
 
   &__img {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center center;
-    opacity: 0;
-    transition: opacity 500ms ease 0s;
+    object-position: center;
+    opacity: 0.3;
+    transition: opacity 500ms ease;
     border-radius: $border-radius;
-    @include respond(tab-land) {
-      opacity: 20%;
-    }
   }
 
   &:hover {
     transform: scale(1.03);
     box-shadow: 0px 0px 20px $color-primary;
-    img {
-      opacity: 40%;
+    z-index: 2; // Traz para frente no hover
+
+    & .project__img {
+      opacity: 0.6;
     }
   }
 }
@@ -211,27 +273,34 @@
     // 1º Item (Transwolff) e 4º Item (Faculdade)
     &:nth-child(1),
     &:nth-child(4) {
-      // Bolinha Maior e Verde
+      // Bolinha Maior (Destaque por tamanho, mantendo a cor do tema)
       &::after {
         width: 3rem;
         height: 3rem;
-        border-color: $color-green; // Destaque visual
+        border-color: $color-primary; // <--- MUDANÇA: Era $color-green
+        box-shadow: 0 0 15px rgba($color-primary, 0.4); // Adicionei um brilho extra
         top: 1rem;
       }
 
-      // Ajuste fino da posição da bolinha maior
-      &:nth-child(odd)::after {
-        right: -1.6rem;
-      } // Ajuste para esquerda
-      &:nth-child(even)::after {
-        left: -1.6rem;
-      } // Ajuste para direita
-
       // Título Maior
       .education__title {
-        font-size: 2.6rem; // Maior que o padrão 2.2rem
-        color: $color-green; // Texto também ganha cor de destaque
-        text-shadow: 0 0 10px rgba($color-green, 0.2);
+        font-size: 2.6rem;
+        color: $color-primary; // <--- MUDANÇA: Era $color-green
+        text-shadow: 0 0 10px rgba($color-primary, 0.2);
+      }
+
+      // Ajustes de posição (mantidos iguais)
+      &:nth-child(odd)::after {
+        right: -1.6rem;
+      }
+      &:nth-child(even)::after {
+        left: -1.6rem;
+      }
+      @include respond(tab-port) {
+        &:nth-child(1)::after,
+        &:nth-child(4)::after {
+          left: 1.5rem;
+        }
       }
     }
 
@@ -399,39 +468,51 @@
     z-index: 10; // Corrigido Z-index para garantir clique
   }
 
+  // src/sass/_sections.scss
+
   &__list {
     padding: 0 1.5rem;
     display: flex;
-    justify-content: center; // Centraliza a lista
-    gap: 3rem; // Espaço entre os ícones
+    justify-content: center;
+    gap: 3rem;
     width: 100%;
 
     &--item {
       list-style: none;
-      // Mantém os hovers de cores originais
+
+      // LinkedIn (Azul)
       &:nth-child(1) a:hover:before {
         background: #0077b5;
       }
+
+      // Email (Cinza/Primary)
       &:nth-child(2) a:hover:before {
         background: $color-primary;
       }
-      &:nth-child(3) a:hover:before {
-        background: $color-white;
+
+      // GitHub (Branco) - AQUI ESTAVA O PROBLEMA
+      &:nth-child(3) {
+        a:hover {
+          color: $color-black; // <--- CORREÇÃO: Ícone vira PRETO no hover
+          &::before {
+            background: $color-white; // Fundo vira Branco
+          }
+        }
       }
     }
 
     &--link {
       display: inline-flex;
-      font-size: 6rem; // Reduzido levemente para elegância (era 8rem)
+      font-size: 6rem;
       text-decoration: none;
       color: $color-white;
-      width: 12rem; // Reduzido para o círculo ficar mais justo (era 20rem)
-      height: 12rem; // Reduzido (era 20rem)
+      width: 12rem;
+      height: 12rem;
       transition: 0.5s linear;
       position: relative;
       z-index: 1;
       margin: auto;
-      align-items: center; // Centraliza o ícone no círculo
+      align-items: center;
       justify-content: center;
 
       @include respond(phone) {
@@ -441,7 +522,7 @@
       }
 
       &:hover {
-        color: $color-white;
+        color: $color-white; // Padrão para os outros ícones
         &::before {
           transform: scale(1);
         }
@@ -465,6 +546,7 @@
       }
     }
   }
+
   #title5 {
     height: 49rem;
 

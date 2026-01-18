@@ -193,7 +193,7 @@ class App {
   }
 
   resetBackground() {
-    document.body.style.backgroundColor = "#7d7d7d";
+    document.body.style.backgroundColor = "";
   }
 
   toggleOverlay(selector, show) {
@@ -282,10 +282,12 @@ class App {
         const projectCard = e.target.closest(".project");
         if (projectCard) {
           this.loadProjectPopup(projectCard.id);
+          return; // Para a execução aqui se for um projeto
         }
 
-        // Verifica se clicou no botão "More Projects"
-        if (e.target.id === "btn-more-projects") {
+        // CORREÇÃO: Verifica se clicou no botão "More Projects" (ou dentro dele)
+        const btnMore = e.target.closest("#btn-more-projects");
+        if (btnMore) {
           this.toggleOverlay("#overlay-modal", true);
         }
       });
