@@ -298,16 +298,58 @@ button,
 }
 
 .about__grid {
-  display: grid;
-  gap: 2rem;
-  font-size: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 4rem;
-  text-align: justify;
+  gap: 2rem;
 }
-.about__grid a {
-  color: white;
+.about__card {
+  flex: 1 1 30rem;
+  max-width: 45rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(41, 152, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: default;
+  pointer-events: all;
+}
+.about__card:hover {
+  transform: translateY(-5px);
+  border-color: #2998ff;
+  box-shadow: 0 5px 15px rgba(41, 152, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.about__card--header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.about__card--header i {
+  font-size: 3rem;
+  color: #2998ff;
+}
+.about__card--header h3 {
+  font-size: 2.2rem;
+  color: #f8fafc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.about__card p {
+  font-size: 1.6rem;
+  color: rgba(248, 250, 252, 0.8);
+  line-height: 1.6;
+  text-align: left;
+}
+.about__card p a {
+  color: #2998ff;
   text-decoration: none;
   font-weight: bold;
+}
+.about__card p a:hover {
+  text-decoration: underline;
 }
 
 .education {

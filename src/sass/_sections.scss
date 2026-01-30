@@ -162,16 +162,68 @@
 // -----------------------------------------------------------------------------
 // ABOUT
 // -----------------------------------------------------------------------------
-.about__grid {
-  display: grid;
-  gap: $gap;
-  font-size: 2rem;
-  padding: $padding-size;
-  text-align: justify;
-  a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+.about {
+  &__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $padding-size;
+    gap: $gap;
+  }
+
+  &__card {
+    // Mesma lógica de tamanho dos projetos para manter consistência
+    flex: 1 1 30rem;
+    max-width: 45rem;
+    background-color: rgba($color-black, 0.6); // Transparente para ver o canvas
+    padding: $padding-small;
+    border-radius: $border-radius;
+    border: 1px solid rgba($color-primary, 0.2);
+    transition: all 0.3s ease;
+    cursor: default;
+    pointer-events: all; // Permite interação sem bloquear o canvas
+
+    &:hover {
+      transform: translateY(-5px);
+      border-color: $color-primary;
+      box-shadow: 0 5px 15px rgba($color-primary, 0.2);
+      background-color: rgba($color-black, 0.8);
+    }
+
+    &--header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      i {
+        font-size: 3rem;
+        color: $color-primary;
+      }
+
+      h3 {
+        font-size: 2.2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: rgba($color-white, 0.8);
+      line-height: 1.6;
+      text-align: left;
+
+      a {
+        color: $color-primary;
+        text-decoration: none;
+        font-weight: bold;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
   }
 }
 

@@ -93,7 +93,17 @@ class App {
     const aboutGrid = document.querySelector(".about__grid");
     if (aboutGrid) {
       aboutGrid.innerHTML = data.about[this.currentLang]
-        .map((p) => `<p>${p}</p>`)
+        .map(
+          (item) => `
+          <div class="about__card">
+            <div class="about__card--header">
+              <i class="fa-solid ${item.icon}"></i>
+              <h3>${item.title}</h3>
+            </div>
+            <p>${item.text}</p>
+          </div>
+        `,
+        )
         .join("");
     }
 

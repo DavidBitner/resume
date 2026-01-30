@@ -1,16 +1,48 @@
 export const data = {
   about: {
     en: [
-      "Web Developer focused on creating scalable solutions and performant interfaces. Specialist in transforming complex requirements into clean, maintainable code.",
-      "I have a genuine passion for optimizing workflows. I thrive on taking repetitive, tedious processes and engineering automated solutions for them. For me, improving efficiency isn't just work; it's a challenge I enjoy, turning potential drudgery into opportunities for innovation.",
-      "My curiosity goes beyond code. As a dedicated enthusiast of nerd culture, I taught myself English to access content and communities that were unavailable locally. This drive to overcome barriers defines how I approach every new technology or problem.",
-      "I am always open to opportunities. Feel free to contact me via email at <a href='mailto:david-bitner@hotmail.com'>david-bitner@hotmail.com</a>.",
+      {
+        icon: "fa-code",
+        title: "The Developer",
+        text: "Web Developer focused on creating scalable solutions and performant interfaces. Specialist in transforming complex requirements into clean, maintainable code.",
+      },
+      {
+        icon: "fa-rocket",
+        title: "The Optimizer",
+        text: "I have a genuine passion for optimizing workflows. I thrive on taking repetitive processes and engineering automated solutions for them. Efficiency is a challenge I enjoy.",
+      },
+      {
+        icon: "fa-book-open",
+        title: "The Self-Taught",
+        text: "As a dedicated enthusiast of nerd culture, I taught myself English to access global communities. This drive to overcome barriers defines how I approach every new technology.",
+      },
+      {
+        icon: "fa-envelope",
+        title: "Open to Connect",
+        text: "I am always open to opportunities. Feel free to contact me via email at <a href='mailto:david-bitner@hotmail.com'>david-bitner@hotmail.com</a>.",
+      },
     ],
     pt: [
-      "Desenvolvedor Web focado em criar soluções escaláveis e interfaces performáticas. Especialista em transformar requisitos complexos em código limpo e manutenível.",
-      "Tenho uma paixão genuína por otimizar fluxos de trabalho. Adoro pegar processos repetitivos e maçantes e criar soluções automatizadas para eles. Para mim, melhorar a eficiência não é apenas trabalho; é um desafio divertido, transformando tarefas tediosas em oportunidades de inovação.",
-      "Minha curiosidade vai além do código. Como um entusiasta da cultura nerd, aprendi inglês sozinho para acessar conteúdos e comunidades que eram inacessíveis localmente. Essa vontade de superar barreiras define como abordo cada nova tecnologia ou problema.",
-      "Estou sempre aberto a oportunidades. Sinta-se à vontade para entrar em contato comigo através do email <a href='mailto:david-bitner@hotmail.com'>david-bitner@hotmail.com</a>.",
+      {
+        icon: "fa-code",
+        title: "O Desenvolvedor",
+        text: "Desenvolvedor Web focado em criar soluções escaláveis e interfaces performáticas. Especialista em transformar requisitos complexos em código limpo e manutenível.",
+      },
+      {
+        icon: "fa-rocket",
+        title: "O Otimizador",
+        text: "Tenho uma paixão genuína por otimizar fluxos de trabalho. Adoro pegar processos repetitivos e criar soluções automatizadas. Melhorar a eficiência é um desafio divertido.",
+      },
+      {
+        icon: "fa-book-open",
+        title: "O Autodidata",
+        text: "Como um entusiasta da cultura nerd, aprendi inglês sozinho para acessar comunidades globais. Esse ímpeto de superar barreiras define como encaro cada nova tecnologia.",
+      },
+      {
+        icon: "fa-envelope",
+        title: "Contato",
+        text: "Estou sempre aberto a oportunidades. Sinta-se à vontade para me contatar por e-mail em <a href='mailto:david-bitner@hotmail.com'>david-bitner@hotmail.com</a>.",
+      },
     ],
   },
 
@@ -199,6 +231,13 @@ export const data = {
       title: "Dictionary",
       link: "https://davidbitner.github.io/dictionary/",
       imgCover: "projects/dictionary.png",
+    },
+    {
+      id: "other-excalibur",
+      highlight: false,
+      title: "Excalibur",
+      link: "https://davidbitner.github.io/excalibur-rain/",
+      imgCover: "projects/excalibur.png",
     },
     {
       id: "other-odp",
