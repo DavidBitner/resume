@@ -78,7 +78,13 @@ export const data = {
       imgCover: "project1.jpg",
       icon: "30projectsIcon.png",
       link: "https://davidbitner.github.io/30-projects/",
-      imgs: Array.from({ length: 13 }, (_, i) => `30projects${i + 1}.png`),
+      imgs: [
+        "30projects1.jpg", "30projects2.jpg", "30projects3.jpg",
+        "30projects4.jpg", "30projects5.jpg", "30projects6.jpg",
+        "30projects7.jpg", "30projects8.jpg", "30projects9.jpg",
+        "30projects10.jpg", "30projects11.jpg", "30projects12.png",
+        "30projects13.jpg",
+      ],
       color: "#195020",
       en: {
         title: "30 Projects",
@@ -100,7 +106,10 @@ export const data = {
       imgCover: "project2.jpg",
       icon: "landingsPageIcon.png",
       link: "https://davidbitner.github.io/landings-page/",
-      imgs: Array.from({ length: 6 }, (_, i) => `landingsPage${i + 1}.png`),
+      imgs: [
+        "landingsPage1.jpg", "landingsPage2.jpg", "landingsPage3.jpg",
+        "landingsPage4.jpg", "landingsPage5.jpg", "landingsPage6.jpg",
+      ],
       color: "#714f3b",
       en: {
         title: "Landings Page",
@@ -172,7 +181,10 @@ export const data = {
       imgCover: "project5.jpg",
       icon: "shapesColorsIcon.png",
       link: "https://davidbitner.github.io/shapes-colors/",
-      imgs: Array.from({ length: 5 }, (_, i) => `shapesColors${i + 1}.png`),
+      imgs: [
+        "shapesColors1.png", "shapesColors2.jpg", "shapesColors3.jpg",
+        "shapesColors4.png", "shapesColors5.jpg",
+      ],
       color: "#000533",
       en: {
         title: "Shapes & Colors",
