@@ -52,10 +52,10 @@ export const data = {
       id: "project-lobotrans",
       highlight: true,
       title: "Lobotrans",
-      imgCover: "projects/lobotrans.jpg", // Tire um print da tela inicial (o menu com os botões)
-      icon: "lobotransIcon.jpg", // Pode usar o logo.png que vi na pasta do projeto
+      imgCover: "projects/lobotrans.png", // Tire um print da tela inicial (o menu com os botões)
+      icon: "lobotransIcon.png", // Pode usar o logo.png que vi na pasta do projeto
       link: "https://davidbitner-lobotrans.vercel.app",
-      imgs: ["lobotrans1.jpg", "lobotrans2.jpg", "lobotrans3.jpg"], // Prints: 1. Menu, 2. Form de Acidentes
+      imgs: ["lobotrans1.png", "lobotrans2.png", "lobotrans3.png"], // Prints: 1. Menu, 2. Form de Acidentes
       color: "#0f3460",
       en: {
         title: "Lobotrans Automation Suite",
@@ -75,7 +75,7 @@ export const data = {
       id: "project1",
       highlight: true,
       title: "30 Projects",
-      imgCover: "project1.jpg",
+      imgCover: "project1.png",
       icon: "30projectsIcon.png",
       link: "https://davidbitner.github.io/30-projects/",
       imgs: Array.from({ length: 13 }, (_, i) => `30projects${i + 1}.png`),
@@ -97,7 +97,7 @@ export const data = {
       id: "project2",
       highlight: true,
       title: "Landings Page",
-      imgCover: "project2.jpg",
+      imgCover: "project2.png",
       icon: "landingsPageIcon.png",
       link: "https://davidbitner.github.io/landings-page/",
       imgs: Array.from({ length: 6 }, (_, i) => `landingsPage${i + 1}.png`),
@@ -123,7 +123,7 @@ export const data = {
       icon: "crosswordIcon.png", // Adicione um ícone ou use um genérico
       link: "https://davidbitner.github.io/palavras-cruzadas-de-encaixe/",
       // Adicione prints do projeto aqui para o carrossel do popup
-      imgs: ["cruzadox1.jpg", "cruzadox2.png"],
+      imgs: ["cruzadox1.png", "cruzadox2.png"],
       color: "#2c3e50", // A cor azul escura usada no CSS do projeto
       en: {
         title: "Cruzadox Generator",
@@ -147,10 +147,10 @@ export const data = {
       id: "project4",
       highlight: true,
       title: "CRUD",
-      imgCover: "project4.jpg",
+      imgCover: "project4.png",
       icon: "crudIcon.png",
       link: "https://davidbitner.github.io/crud/",
-      imgs: ["crud1.jpg", "crud2.jpg", "crud3.jpg"],
+      imgs: ["crud1.png", "crud2.png", "crud3.png"],
       color: "#606060",
       en: {
         title: "CRUD Application",
@@ -169,7 +169,7 @@ export const data = {
       id: "project5",
       highlight: true,
       title: "Shapes and colors",
-      imgCover: "project5.jpg",
+      imgCover: "project5.png",
       icon: "shapesColorsIcon.png",
       link: "https://davidbitner.github.io/shapes-colors/",
       imgs: Array.from({ length: 5 }, (_, i) => `shapesColors${i + 1}.png`),
@@ -191,10 +191,10 @@ export const data = {
       id: "project6",
       highlight: true,
       title: "Movie Guide",
-      imgCover: "project6.jpg",
+      imgCover: "project6.png",
       icon: "movieGuideIcon.png",
       link: "https://davidbitner.github.io/movie-guide/",
-      imgs: ["movieGuide1.jpg", "movieGuide2.jpg", "movieGuide3.jpg"],
+      imgs: ["movieGuide1.png", "movieGuide2.png", "movieGuide3.png"],
       color: "#771111",
       en: {
         title: "Movie Guide",
@@ -216,7 +216,7 @@ export const data = {
       highlight: false,
       title: "Blue Crystal Calculator",
       link: "https://davidbitner.github.io/blue-crystal-calculator/",
-      imgCover: "projects/bcc.jpg",
+      imgCover: "projects/bcc.png",
     },
     {
       id: "other-hackerman",
@@ -237,42 +237,42 @@ export const data = {
       highlight: false,
       title: "Excalibur",
       link: "https://davidbitner.github.io/excalibur-rain/",
-      imgCover: "projects/excalibur.jpg",
+      imgCover: "projects/excalibur.png",
     },
     {
       id: "other-odp",
       highlight: false,
       title: "ODP",
       link: "https://davidbitner.github.io/odp/",
-      imgCover: "projects/odp.jpg",
+      imgCover: "projects/odp.png",
     },
     {
       id: "other-timers",
       highlight: false,
       title: "Timers",
       link: "https://davidbitner.github.io/timers/",
-      imgCover: "projects/timers.jpg",
+      imgCover: "projects/timers.png",
     },
     {
       id: "other-login",
       highlight: false,
       title: "Login",
       link: "https://davidbitner.github.io/login/",
-      imgCover: "projects/login.jpg",
+      imgCover: "projects/login.png",
     },
     {
       id: "other-quiz",
       highlight: false,
       title: "Quiz APP",
       link: "https://davidbitner.github.io/quiz-app/",
-      imgCover: "projects/quizApp.jpg",
+      imgCover: "projects/quizApp.png",
     },
     {
       id: "other-list",
       highlight: false,
       title: "List",
       link: "https://davidbitner.github.io/list/",
-      imgCover: "projects/list.jpg",
+      imgCover: "projects/list.png",
     },
     {
       id: "other-despertador",
@@ -286,7 +286,7 @@ export const data = {
       highlight: false,
       title: "Sliders",
       link: "https://davidbitner.github.io/slider-design/",
-      imgCover: "projects/sliders.jpg",
+      imgCover: "projects/sliders.png",
     },
   ],
 
