@@ -179,7 +179,7 @@ button,
   width: 100%;
   z-index: 0;
   animation: backgroundHeaderAnimation 20s ease-in-out 0s infinite alternate forwards;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -240,17 +240,6 @@ button,
   height: 14rem;
   flex: 0 0 calc((100% - 4 * 2rem) / 5);
   width: calc((100% - 4 * 2rem) / 5);
-  cursor: pointer;
-  color: #f8fafc;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-  transition: all 0.2s;
-  text-transform: uppercase;
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
 }
 @media only screen and (max-width: 75em) {
   .project {
@@ -269,6 +258,19 @@ button,
     flex: 0 0 100%;
     width: 100%;
   }
+}
+.project {
+  cursor: pointer;
+  color: #f8fafc;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  transition: all 0.2s;
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 .project__text {
   z-index: 1;
@@ -710,7 +712,7 @@ button,
   font-size: 2rem;
 }
 .popup__subtitle {
-  color: #0f172a;
+  color: #94a3b8;
 }
 .popup__highlights {
   display: grid;

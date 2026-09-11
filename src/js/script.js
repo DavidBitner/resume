@@ -4,6 +4,7 @@ import { translations } from "./translations.js";
 class App {
   constructor() {
     this.currentLang = "en";
+    this.otherProjectsRendered = false;
     this.init();
   }
 
@@ -53,34 +54,22 @@ class App {
   }
 
   renderDynamicContent() {
-    // 1. PROJETOS
+    // 1. PROJETOS (destacados - visíveis de cara, então sempre renderizados)
     const projectsGrid = document.querySelector(".projects__grid");
-    const modalGrid = document.querySelector(".modal__grid");
-
     projectsGrid.innerHTML = "";
-    modalGrid.innerHTML = "";
 
-    data.projects.forEach((proj) => {
-      if (proj.highlight) {
+    data.projects
+      .filter((proj) => proj.highlight)
+      .forEach((proj) => {
         const card = document.createElement("div");
         card.classList.add("project");
         card.id = proj.id;
         card.innerHTML = `
           <div class="project__text">${proj[this.currentLang]?.title || proj.title}</div>
-          <img src="src/img/${proj.imgCover}" alt="${proj.title}" class="project__img" />
+          <img src="src/img/${proj.imgCover}" alt="${proj.title}" class="project__img" loading="lazy" />
         `;
         projectsGrid.appendChild(card);
-      } else {
-        const link = document.createElement("a");
-        link.classList.add("modal__project");
-        link.target = "_blank";
-        link.href = proj.link;
-        link.id = proj.id;
-        link.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("src/img/${proj.imgCover}")`;
-        link.innerHTML = `<div class="modal__project--text">${proj.title}</div>`;
-        modalGrid.appendChild(link);
-      }
-    });
+      });
 
     // Botão More Projects
     const btnMore = document.createElement("button");
@@ -88,6 +77,12 @@ class App {
     btnMore.id = "btn-more-projects";
     btnMore.textContent = translations[this.currentLang].labels.moreProjects;
     projectsGrid.appendChild(btnMore);
+
+    // Projetos do modal "Other Projects" - só renderiza (e carrega as imagens)
+    // se o modal já foi aberto antes; senão, fica pra quando for aberto
+    if (this.otherProjectsRendered) {
+      this.renderOtherProjects();
+    }
 
     // 2. ABOUT ME
     const aboutGrid = document.querySelector(".about__grid");
@@ -136,6 +131,26 @@ class App {
     renderList("list-tools", data.skills.tools);
     renderList("list-soft", data.skills.soft[this.currentLang]);
     renderList("list-lang", data.skills.languages[this.currentLang]);
+  }
+
+  renderOtherProjects() {
+    const modalGrid = document.querySelector(".modal__grid");
+    modalGrid.innerHTML = "";
+
+    data.projects
+      .filter((proj) => !proj.highlight)
+      .forEach((proj) => {
+        const link = document.createElement("a");
+        link.classList.add("modal__project");
+        link.target = "_blank";
+        link.href = proj.link;
+        link.id = proj.id;
+        link.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("src/img/${proj.imgCover}")`;
+        link.innerHTML = `<div class="modal__project--text">${proj.title}</div>`;
+        modalGrid.appendChild(link);
+      });
+
+    this.otherProjectsRendered = true;
   }
 
   // --- LÓGICA DE POPUP ---
@@ -254,6 +269,7 @@ class App {
         }
         const btnMore = e.target.closest("#btn-more-projects");
         if (btnMore) {
+          if (!this.otherProjectsRendered) this.renderOtherProjects();
           this.toggleOverlay("#overlay-modal", true);
         }
       });
@@ -276,6 +292,12 @@ class App {
         this.toggleOverlay("#overlay-popup", false);
       if (e.target.id === "overlay-modal")
         this.toggleOverlay("#overlay-modal", false);
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key !== "Escape") return;
+      this.toggleOverlay("#overlay-popup", false);
+      this.toggleOverlay("#overlay-modal", false);
     });
   }
 }
