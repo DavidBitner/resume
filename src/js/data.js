@@ -52,10 +52,10 @@ export const data = {
       id: "project-lobotrans",
       highlight: true,
       title: "Lobotrans",
-      imgCover: "projects/lobotrans.jpg", // Tire um print da tela inicial (o menu com os botões)
-      icon: "projects/lobotransIcon.jpg", // Pode usar o logo.png que vi na pasta do projeto
+      imgCover: "projects/lobotrans.jpg",
+      icon: "lobotransIcon.jpg",
       link: "https://davidbitner-lobotrans.vercel.app",
-      imgs: ["lobotrans1.jpg", "lobotrans2.jpg", "lobotrans3.jpg"], // Prints: 1. Menu, 2. Form de Acidentes
+      imgs: ["lobotrans1.jpg", "lobotrans2.jpg", "lobotrans3.jpg"],
       color: "#0f3460",
       en: {
         title: "Lobotrans Automation Suite",
@@ -128,12 +128,11 @@ export const data = {
       id: "project3", // Mantém o ID para ficar na mesma posição (3º lugar)
       highlight: true,
       title: "Cruzadox",
-      imgCover: "project3.png", // Certifique-se de substituir a imagem na pasta src/img/
-      icon: "crosswordIcon.png", // Adicione um ícone ou use um genérico
+      imgCover: "project3.png",
+      icon: "crosswordIcon.png",
       link: "https://davidbitner.github.io/palavras-cruzadas-de-encaixe/",
-      // Adicione prints do projeto aqui para o carrossel do popup
       imgs: ["cruzadox1.jpg", "cruzadox2.png"],
-      color: "#2c3e50", // A cor azul escura usada no CSS do projeto
+      color: "#2c3e50",
       en: {
         title: "Cruzadox Generator",
         subtitle: "Fit-word puzzle generator with print layout.",

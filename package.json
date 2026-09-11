@@ -4,8 +4,8 @@
   "description": "Interactive resume",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass src/sass/main.scss src/css/style.css --watch",
-    "compile:sass": "sass src/sass/main.scss src/css/style.comp.css --no-source-map",
+    "watch:sass": "sass src/sass/style.scss src/css/style.css --watch",
+    "compile:sass": "sass src/sass/style.scss src/css/style.comp.css --no-source-map",
     "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" src/css/style.comp.css -o src/css/style.prefix.css",
     "compress:css": "sass src/css/style.prefix.css src/css/style.css --style=compressed --no-source-map",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
@@ -26,6 +26,7 @@
     "postcss": "^8.4.16"
   },
   "devDependencies": {
-    "sass": "^1.97.2"
+    "sass": "^1.97.2",
+    "postcss-cli": "^11.0.0"
   }
 }
