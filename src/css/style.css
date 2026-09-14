@@ -306,6 +306,11 @@ button,
   padding: 4rem;
   gap: 2rem;
 }
+.about__cv {
+  padding: 4rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
 .about__card {
   flex: 1 1 30rem;
   max-width: 45rem;

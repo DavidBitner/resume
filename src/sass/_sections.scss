@@ -171,6 +171,12 @@
     gap: $gap;
   }
 
+  &__cv {
+    padding: $padding-size;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
   &__card {
     // Mesma lógica de tamanho dos projetos para manter consistência
     flex: 1 1 30rem;

@@ -43,6 +43,7 @@ class App {
     document.querySelector(".github__btn").textContent = t.labels.github;
     document.querySelector(".popup__btn").textContent = t.labels.popupBtn;
     document.querySelector(".footer__text").textContent = t.labels.footer;
+    document.querySelector(".about__cv-btn").textContent = t.labels.downloadCV;
 
     const skillTitles = document.querySelectorAll(".skills__title");
     if (skillTitles.length >= 4) {
