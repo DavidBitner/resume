@@ -10,6 +10,7 @@ export const translations = {
     labels: {
       moreProjects: "More Projects",
       github: "See project on GitHub",
+      githubHeading: "Check out my projects on GitHub!",
       popupBtn: "Visit Website",
       downloadCV: "Download CV",
       footer: "By Bitner",
@@ -30,11 +31,12 @@ export const translations = {
     labels: {
       moreProjects: "Mais Projetos",
       github: "Veja o projeto no GitHub",
+      githubHeading: "Confira meus projetos no GitHub!",
       popupBtn: "Visitar Website",
       downloadCV: "Baixar Currículo",
       footer: "Por Bitner",
       techTitle: "Principais Linguagens e Tecnologias",
-      toolsTitle: "Ferramentas que mais uso",
+      toolsTitle: "Ferramentas Que Mais Uso",
       softTitle: "Soft Skills",
       langTitle: "Idiomas",
     },

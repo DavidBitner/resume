@@ -41,6 +41,7 @@ class App {
       t.titles.skills;
 
     document.querySelector(".github__btn").textContent = t.labels.github;
+    document.querySelector(".github__text").textContent = t.labels.githubHeading;
     document.querySelector(".popup__btn").textContent = t.labels.popupBtn;
     document.querySelector(".footer__text").textContent = t.labels.footer;
     document.querySelector(".about__cv-btn").textContent = t.labels.downloadCV;
