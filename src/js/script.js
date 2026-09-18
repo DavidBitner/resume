@@ -4,6 +4,7 @@ import { translations } from "./translations.js";
 class App {
   constructor() {
     this.currentLang = "en";
+    this.currentProjectId = null;
     this.otherProjectsRendered = false;
     this.init();
   }
@@ -28,6 +29,11 @@ class App {
 
     this.renderStaticTexts();
     this.renderDynamicContent();
+
+    if (this.currentProjectId) {
+      const project = data.projects.find((p) => p.id === this.currentProjectId);
+      if (project) this.updatePopupText(project);
+    }
   }
 
   renderStaticTexts() {
@@ -67,7 +73,7 @@ class App {
         card.classList.add("project");
         card.id = proj.id;
         card.innerHTML = `
-          <div class="project__text">${proj[this.currentLang]?.title || proj.title}</div>
+          <div class="project__text">${proj.title}</div>
           <img src="src/img/${proj.imgCover}" alt="${proj.title}" class="project__img" loading="lazy" />
         `;
         projectsGrid.appendChild(card);
@@ -160,20 +166,13 @@ class App {
   loadProjectPopup(projectId) {
     const project = data.projects.find((p) => p.id === projectId);
     if (!project) return;
-    const langData = project[this.currentLang];
+    this.currentProjectId = projectId;
     const popup = document.querySelector(".popup");
 
     popup.querySelector(".popup__icon").style.backgroundImage =
       `url("src/img/projects/${project.icon}")`;
-    popup.querySelector(".popup__title").textContent = langData.title;
-    popup.querySelector(".popup__subtitle").textContent = langData.subtitle;
-    popup.querySelector(".popup__text").textContent = langData.text;
     popup.querySelector(".popup__btn").href = project.link;
-
-    const hlContainer = popup.querySelector(".popup__highlights");
-    hlContainer.innerHTML = langData.highlights
-      .map((h) => `<div class="popup__highlight">${h}</div>`)
-      .join("");
+    this.updatePopupText(project);
 
     const imgContainer = popup.querySelector(".popup__imgs");
     imgContainer.scrollLeft = 0;
@@ -184,7 +183,57 @@ class App {
       )
       .join("");
 
+    this.setupImgDots(imgContainer, project.imgs.length);
+
     this.toggleOverlay("#overlay-popup", true);
+  }
+
+  updatePopupText(project) {
+    const langData = project[this.currentLang];
+    const popup = document.querySelector(".popup");
+
+    popup.querySelector(".popup__title").textContent = project.title;
+    popup.querySelector(".popup__subtitle").textContent = langData.subtitle;
+    popup.querySelector(".popup__text").textContent = langData.text;
+
+    const hlContainer = popup.querySelector(".popup__highlights");
+    hlContainer.innerHTML = langData.highlights
+      .map((h) => `<div class="popup__highlight">${h}</div>`)
+      .join("");
+  }
+
+  setupImgDots(imgContainer, count) {
+    const dotsContainer = document.querySelector(".popup__imgs-dots");
+    if (count <= 1) {
+      dotsContainer.innerHTML = "";
+      return;
+    }
+
+    dotsContainer.innerHTML = Array.from(
+      { length: count },
+      (_, i) => `<button class="popup__imgs-dot" data-index="${i}"></button>`,
+    ).join("");
+
+    const dots = [...dotsContainer.querySelectorAll(".popup__imgs-dot")];
+    const slides = [...imgContainer.querySelectorAll(".popup__img")];
+
+    const setActive = (index) => {
+      dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+    };
+    setActive(0);
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener("click", () => slides[i].scrollIntoView({ behavior: "smooth", inline: "start", block: "nearest" }));
+    });
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) setActive(slides.indexOf(visible.target));
+      },
+      { root: imgContainer, threshold: 0.6 },
+    );
+    slides.forEach((slide) => observer.observe(slide));
   }
 
   changeBackground(elementId) {
@@ -237,13 +286,19 @@ class App {
       startX,
       scrollLeft;
 
+    const release = () => {
+      if (!mouseDown) return;
+      mouseDown = false;
+      this.snapToNearestSlide(slider);
+    };
+
     slider.addEventListener("mousedown", (e) => {
       mouseDown = true;
       startX = e.pageX - slider.offsetLeft;
       scrollLeft = slider.scrollLeft;
     });
-    slider.addEventListener("mouseleave", () => (mouseDown = false));
-    slider.addEventListener("mouseup", () => (mouseDown = false));
+    slider.addEventListener("mouseleave", release);
+    slider.addEventListener("mouseup", release);
     slider.addEventListener("mousemove", (e) => {
       if (!mouseDown) return;
       e.preventDefault();
@@ -251,6 +306,19 @@ class App {
       const scroll = x - startX;
       slider.scrollLeft = scrollLeft - scroll;
     });
+  }
+
+  snapToNearestSlide(slider) {
+    if (getComputedStyle(slider).scrollSnapType === "none") return;
+    const slides = [...slider.children];
+    if (!slides.length) return;
+    const nearest = slides.reduce((closest, slide) =>
+      Math.abs(slide.offsetLeft - slider.scrollLeft) <
+      Math.abs(closest.offsetLeft - slider.scrollLeft)
+        ? slide
+        : closest,
+    );
+    slider.scrollTo({ left: nearest.offsetLeft, behavior: "smooth" });
   }
 
   addEventListeners() {

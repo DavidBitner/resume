@@ -58,13 +58,11 @@ export const data = {
       imgs: ["lobotrans1.jpg", "lobotrans2.jpg", "lobotrans3.jpg"],
       color: "#0f3460",
       en: {
-        title: "Lobotrans Automation Suite",
         subtitle: "Corporate internal tooling for operational efficiency.",
         highlights: ["Node.js", "Docx Automation", "Process Optimization"],
         text: "A production-grade suite of tools I developed for Transwolff. It automates the generation of complex accident and occurrence reports. By converting manual Word processing into structured web forms, I reduced the reporting time by ~70% and ensured data consistency across the department. Used daily by the operational team.",
       },
       pt: {
-        title: "Suíte de Automação Lobotrans",
         subtitle:
           "Ferramentas internas corporativas para eficiência operacional.",
         highlights: ["Node.js", "Automação Docx", "Otimização de Processos"],
@@ -76,7 +74,7 @@ export const data = {
       highlight: true,
       title: "30 Projects",
       imgCover: "project1.jpg",
-      icon: "30projectsIcon.png",
+      icon: "30projectsIcon.svg",
       link: "https://davidbitner.github.io/30-projects/",
       imgs: [
         "30projects1.jpg", "30projects2.jpg", "30projects3.jpg",
@@ -87,13 +85,11 @@ export const data = {
       ],
       color: "#195020",
       en: {
-        title: "30 Projects",
         subtitle: "A massive project involving multiple concepts.",
         highlights: ["API's", "Custom Canvas", "JS Modules"],
         text: "A comprehensive showcase of skills. Features a custom canvas matrix effect, consumption of multiple APIs, advanced CSS/SCSS, Bootstrap integration, and diverse JavaScript applications.",
       },
       pt: {
-        title: "30 Projetos",
         subtitle: "Um projeto massivo envolvendo múltiplos conceitos.",
         highlights: ["API's", "Custom Canvas", "JS Modules"],
         text: "Uma demonstração abrangente de habilidades. Apresenta efeito matrix em canvas, consumo de múltiplas APIs, CSS/SCSS avançado, integração com Bootstrap e diversas aplicações JavaScript.",
@@ -104,7 +100,7 @@ export const data = {
       highlight: true,
       title: "Landings Page",
       imgCover: "project2.jpg",
-      icon: "landingsPageIcon.png",
+      icon: "landingsPageIcon.svg",
       link: "https://davidbitner.github.io/landings-page/",
       imgs: [
         "landingsPage1.jpg", "landingsPage2.jpg", "landingsPage3.jpg",
@@ -112,13 +108,11 @@ export const data = {
       ],
       color: "#714f3b",
       en: {
-        title: "Landings Page",
         subtitle: "High-conversion landing page structure.",
         highlights: ["Agile", "Splide Carousel", "Ken Burns Effect"],
         text: "Developed using Agile concepts (Sprints, Mind Maps). Features complex bezier animations creating a cinematic Ken Burns effect on the main banner.",
       },
       pt: {
-        title: "Landings Page",
         subtitle: "Estrutura de landing page de alta conversão.",
         highlights: ["Agile", "Splide Carousel", "Ken Burns Effect"],
         text: "Desenvolvido usando conceitos Agile (Sprints, Mapas Mentais). Apresenta animações bezier complexas criando um efeito cinematográfico Ken Burns no banner principal.",
@@ -134,13 +128,11 @@ export const data = {
       imgs: ["cruzadox1.jpg", "cruzadox2.png"],
       color: "#2c3e50",
       en: {
-        title: "Cruzadox Generator",
         subtitle: "Fit-word puzzle generator with print layout.",
         highlights: ["Greedy Algorithm", "Print CSS", "Logic & Math"],
         text: "A custom tool developed to solve a market gap for specific puzzle types. Features a complex greedy algorithm to calculate the optimal grid layout for any given list of words and a specialized CSS print view for A4 paper output.",
       },
       pt: {
-        title: "Gerador Cruzadox",
         subtitle:
           "Gerador de palavras cruzadas de encaixe pronto para impressão.",
         highlights: [
@@ -156,18 +148,16 @@ export const data = {
       highlight: true,
       title: "CRUD",
       imgCover: "project4.jpg",
-      icon: "crudIcon.png",
+      icon: "crudIcon.svg",
       link: "https://davidbitner.github.io/crud/",
       imgs: ["crud1.jpg", "crud2.jpg", "crud3.jpg"],
       color: "#606060",
       en: {
-        title: "CRUD Application",
         subtitle: "Data management system with persistence.",
         highlights: ["JS Classes", "LocalStorage", "State Management"],
         text: "Full Create-Read-Update-Delete application. Features modal interfaces for data entry and LocalStorage implementation for data persistence.",
       },
       pt: {
-        title: "Aplicação CRUD",
         subtitle: "Sistema de gerenciamento de dados com persistência.",
         highlights: ["Classes JS", "LocalStorage", "Gestão de Estado"],
         text: "Aplicação completa de Create-Read-Update-Delete. Possui interfaces modais para entrada de dados e implementação de LocalStorage para persistência.",
@@ -178,7 +168,7 @@ export const data = {
       highlight: true,
       title: "Shapes and colors",
       imgCover: "project5.jpg",
-      icon: "shapesColorsIcon.png",
+      icon: "shapesColorsIcon.svg",
       link: "https://davidbitner.github.io/shapes-colors/",
       imgs: [
         "shapesColors1.png", "shapesColors2.jpg", "shapesColors3.jpg",
@@ -186,13 +176,11 @@ export const data = {
       ],
       color: "#000533",
       en: {
-        title: "Shapes & Colors",
         subtitle: "Interactive DOM manipulation study.",
         highlights: ["Event Listeners", "Keyboard Events", "CSS Variables"],
         text: "Interactive sandbox exploring container manipulation via mouse coordinates and keyboard events to alter shapes, colors, and dimensions dynamically.",
       },
       pt: {
-        title: "Shapes & Colors",
         subtitle: "Estudo interativo de manipulação do DOM.",
         highlights: ["Event Listeners", "Eventos de Teclado", "Variáveis CSS"],
         text: "Sandbox interativo explorando manipulação de containers via coordenadas do mouse e eventos de teclado para alterar formas, cores e dimensões dinamicamente.",
@@ -208,13 +196,11 @@ export const data = {
       imgs: ["movieGuide1.jpg", "movieGuide2.jpg", "movieGuide3.jpg"],
       color: "#771111",
       en: {
-        title: "Movie Guide",
         subtitle: "Cinema database interface.",
         highlights: ["REST API", "Responsive Grid", "Error Handling"],
         text: "Movie search engine integrating with external APIs to display detailed metadata, ratings, and posters with a fully responsive layout.",
       },
       pt: {
-        title: "Guia de Filmes",
         subtitle: "Interface de banco de dados de cinema.",
         highlights: ["REST API", "Grid Responsivo", "Tratamento de Erros"],
         text: "Mecanismo de busca de filmes integrando com APIs externas para exibir metadados detalhados, avaliações e pôsteres com layout totalmente responsivo.",

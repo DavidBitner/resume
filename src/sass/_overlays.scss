@@ -15,11 +15,16 @@
   font-size: $font-small;
   opacity: 0;
   transition: all 0.4s;
+
+  @include respond(tab-port) {
+    align-content: center;
+  }
 }
 
 .popup {
   display: grid;
   min-height: 50vh;
+  max-height: 90vh;
   grid-template-columns: 60vw;
   margin-top: 10rem;
   background-color: $color-black;
@@ -28,7 +33,14 @@
   padding: $padding-size;
   gap: $gap;
   overflow-x: hidden;
+  overflow-y: auto;
   transform: translateY(100rem);
+
+  @include respond(tab-port) {
+    grid-template-columns: 90vw;
+    margin-top: 0;
+    padding: $padding-small;
+  }
 
   &__header {
     display: grid;
@@ -46,6 +58,7 @@
     border-radius: 2px;
     grid-row: 1/3;
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
@@ -57,18 +70,16 @@
   }
 
   &__highlights {
-    display: grid;
-    grid-template-columns: repeat(4, max-content);
-    gap: $gap;
-    @include respond(tab-land) {
-      overflow: auto;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-small $gap;
   }
 
   &__highlight {
     padding: $padding-small;
     border: 0.5px solid $color-white-transparent;
     border-radius: $border-radius;
+    white-space: nowrap;
   }
 
   &__imgs {
@@ -82,6 +93,15 @@
     @include respond(tab-land) {
       overflow: auto;
     }
+
+    @include respond(tab-port) {
+      grid-auto-columns: 100%;
+      overflow-x: auto;
+      cursor: default;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      height: 30rem;
+    }
   }
 
   &__img {
@@ -94,6 +114,37 @@
     background-size: contain;
     padding: $padding-small;
     background-origin: content-box;
+
+    @include respond(tab-port) {
+      height: 30rem;
+      width: 100%;
+      scroll-snap-align: center;
+      scroll-snap-stop: always;
+    }
+  }
+
+  &__imgs-dots {
+    display: none;
+    justify-content: center;
+    gap: $gap-small;
+
+    @include respond(tab-port) {
+      display: flex;
+    }
+  }
+
+  &__imgs-dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: $color-white-transparent;
+    cursor: pointer;
+
+    &.active {
+      background-color: $color-white;
+    }
   }
 }
 

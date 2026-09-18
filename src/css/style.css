@@ -684,10 +684,16 @@ button,
   opacity: 0;
   transition: all 0.4s;
 }
+@media only screen and (max-width: 56.25em) {
+  .overlay {
+    align-content: center;
+  }
+}
 
 .popup {
   display: grid;
   min-height: 50vh;
+  max-height: 90vh;
   grid-template-columns: 60vw;
   margin-top: 10rem;
   background-color: #000;
@@ -696,7 +702,15 @@ button,
   padding: 4rem;
   gap: 2rem;
   overflow-x: hidden;
+  overflow-y: auto;
   transform: translateY(100rem);
+}
+@media only screen and (max-width: 56.25em) {
+  .popup {
+    grid-template-columns: 90vw;
+    margin-top: 0;
+    padding: 2rem;
+  }
 }
 .popup__header {
   display: grid;
@@ -713,6 +727,7 @@ button,
   border-radius: 2px;
   grid-row: 1/3;
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .popup__title {
@@ -722,19 +737,15 @@ button,
   color: #94a3b8;
 }
 .popup__highlights {
-  display: grid;
-  grid-template-columns: repeat(4, max-content);
-  gap: 2rem;
-}
-@media only screen and (max-width: 75em) {
-  .popup__highlights {
-    overflow: auto;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
 }
 .popup__highlight {
   padding: 2rem;
   border: 0.5px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.5rem;
+  white-space: nowrap;
 }
 .popup__imgs {
   display: grid;
@@ -750,6 +761,16 @@ button,
     overflow: auto;
   }
 }
+@media only screen and (max-width: 56.25em) {
+  .popup__imgs {
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    cursor: default;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    height: 30rem;
+  }
+}
 .popup__img {
   background-color: #1e293b;
   height: 40rem;
@@ -760,6 +781,36 @@ button,
   background-size: contain;
   padding: 2rem;
   background-origin: content-box;
+}
+@media only screen and (max-width: 56.25em) {
+  .popup__img {
+    height: 30rem;
+    width: 100%;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+}
+.popup__imgs-dots {
+  display: none;
+  justify-content: center;
+  gap: 1rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .popup__imgs-dots {
+    display: flex;
+  }
+}
+.popup__imgs-dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.18);
+  cursor: pointer;
+}
+.popup__imgs-dot.active {
+  background-color: #f8fafc;
 }
 
 #overlay-modal {
