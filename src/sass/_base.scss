@@ -51,7 +51,6 @@ body {
   color: $color-white;
 }
 
-// O Palco Global das Partículas (Fixo no fundo)
 #global-particles {
   position: fixed;
   top: 0;
@@ -153,7 +152,7 @@ body {
 
   &:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px $color-primary; // Atualizado para Azul
+    box-shadow: 0 0 20px $color-primary;
     & img {
       transform: scale(1);
     }
@@ -167,6 +166,7 @@ body {
     transition: all 0.2s;
   }
 }
+
 
 a,
 button,

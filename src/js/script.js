@@ -6,6 +6,7 @@ class App {
     this.currentLang = "en";
     this.currentProjectId = null;
     this.otherProjectsRendered = false;
+    this.imgObserver = null;
     this.init();
   }
 
@@ -19,6 +20,7 @@ class App {
 
   toggleLanguage() {
     this.currentLang = this.currentLang === "en" ? "pt" : "en";
+    document.documentElement.lang = this.currentLang;
     const flag = document.querySelector("#change-language img");
     flag.src =
       this.currentLang === "en"
@@ -49,6 +51,7 @@ class App {
     document.querySelector(".github__btn").textContent = t.labels.github;
     document.querySelector(".github__text").textContent = t.labels.githubHeading;
     document.querySelector(".popup__btn").textContent = t.labels.popupBtn;
+    document.querySelector(".modal__title").textContent = t.labels.otherProjects;
     document.querySelector(".footer__text").textContent = t.labels.footer;
     document.querySelector(".about__cv-btn").textContent = t.labels.downloadCV;
 
@@ -203,6 +206,7 @@ class App {
   }
 
   setupImgDots(imgContainer, count) {
+    this.imgObserver?.disconnect();
     const dotsContainer = document.querySelector(".popup__imgs-dots");
     if (count <= 1) {
       dotsContainer.innerHTML = "";
@@ -211,7 +215,8 @@ class App {
 
     dotsContainer.innerHTML = Array.from(
       { length: count },
-      (_, i) => `<button class="popup__imgs-dot" data-index="${i}"></button>`,
+      (_, i) =>
+        `<button class="popup__imgs-dot" data-index="${i}" aria-label="Image ${i + 1} of ${count}"></button>`,
     ).join("");
 
     const dots = [...dotsContainer.querySelectorAll(".popup__imgs-dot")];
@@ -234,6 +239,7 @@ class App {
       { root: imgContainer, threshold: 0.6 },
     );
     slides.forEach((slide) => observer.observe(slide));
+    this.imgObserver = observer;
   }
 
   changeBackground(elementId) {
@@ -244,7 +250,6 @@ class App {
   }
 
   resetBackground() {
-    // Limpa o inline style para voltar a obedecer o CSS (Azul Dark Slate)
     document.body.style.backgroundColor = "";
   }
 

@@ -9,6 +9,7 @@ export const translations = {
     },
     labels: {
       moreProjects: "More Projects",
+      otherProjects: "Other Projects",
       github: "See project on GitHub",
       githubHeading: "Check out my projects on GitHub!",
       popupBtn: "Visit Website",
@@ -30,6 +31,7 @@ export const translations = {
     },
     labels: {
       moreProjects: "Mais Projetos",
+      otherProjects: "Outros Projetos",
       github: "Veja o projeto no GitHub",
       githubHeading: "Confira meus projetos no GitHub!",
       popupBtn: "Visitar Website",
