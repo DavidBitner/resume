@@ -61,22 +61,22 @@ export const data = {
     {
       id: "project-lobotrans",
       highlight: true,
-      title: "Lobotrans",
+      title: "LTS",
       imgCover: "projects/lobotrans.jpg",
       icon: "lobotransIcon.jpg",
-      link: "https://davidbitner-lobotrans.vercel.app",
+      link: "https://davidbitner-lts.vercel.app",
       imgs: ["lobotrans1.jpg", "lobotrans2.jpg", "lobotrans3.jpg"],
       color: "#0f3460",
       en: {
         subtitle: "Corporate internal tooling for operational efficiency.",
         highlights: ["Node.js", "Docx Automation", "Process Optimization"],
-        text: "Before Lobotrans, incident and occurrence reporting at Transwolff was entirely manual — copying and pasting into Word by hand, a process prone to inconsistent formatting and, critically, forgotten fields in reports that mattered. I built this suite to put the whole workflow on rails: structured forms guide operators through every required field, images are processed and positioned automatically, and the final document is generated from a template with guaranteed consistency. An AI-assisted proofreading step reviews key narrative fields before submission. Used daily by the operational team, it cut report time by ~70% and removed most of the human error that came with the old process.",
+        text: "Before LTS, incident and occurrence reporting at Transwolff was entirely manual — copying and pasting into Word by hand, a process prone to inconsistent formatting and, critically, forgotten fields in reports that mattered. I built this suite to put the whole workflow on rails: structured forms guide operators through every required field, images are processed and positioned automatically, and the final document is generated from a template with guaranteed consistency. An AI-assisted proofreading step reviews key narrative fields before submission. Used daily by the operational team, it cut report time by ~70% and removed most of the human error that came with the old process.",
       },
       pt: {
         subtitle:
           "Ferramentas internas corporativas para eficiência operacional.",
         highlights: ["Node.js", "Automação Docx", "Otimização de Processos"],
-        text: "Antes do Lobotrans, o registro de acidentes e ocorrências na Transwolff era inteiramente manual — copiar e colar no Word à mão, um processo sujeito a formatação inconsistente e, o que é mais crítico, campos esquecidos em relatórios importantes. Criei essa suíte para colocar todo o fluxo nos trilhos: formulários estruturados guiam o operador por cada campo obrigatório, imagens são processadas e posicionadas automaticamente, e o documento final é gerado a partir de um template com consistência garantida. Uma etapa de revisão assistida por IA confere os campos narrativos antes do envio. Usado diariamente pela equipe operacional, reduziu o tempo de relatório em ~70% e eliminou boa parte dos erros humanos do processo antigo.",
+        text: "Antes do LTS, o registro de acidentes e ocorrências na Transwolff era inteiramente manual — copiar e colar no Word à mão, um processo sujeito a formatação inconsistente e, o que é mais crítico, campos esquecidos em relatórios importantes. Criei essa suíte para colocar todo o fluxo nos trilhos: formulários estruturados guiam o operador por cada campo obrigatório, imagens são processadas e posicionadas automaticamente, e o documento final é gerado a partir de um template com consistência garantida. Uma etapa de revisão assistida por IA confere os campos narrativos antes do envio. Usado diariamente pela equipe operacional, reduziu o tempo de relatório em ~70% e eliminou boa parte dos erros humanos do processo antigo.",
       },
     },
     {
