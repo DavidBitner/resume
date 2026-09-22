@@ -4,7 +4,12 @@ export const data = {
       {
         icon: "fa-code",
         title: "The Developer",
-        text: "Web Developer focused on creating scalable solutions and performant interfaces. Specialist in transforming complex requirements into clean, maintainable code.",
+        text: "I build systems, not just interfaces — turning manual, error-prone processes into structured, reliable workflows. Whether it's clean code, an automated report, or a well-organized dataset, my focus is on solving the problem the right way, not just picking a familiar tool.",
+      },
+      {
+        icon: "fa-magnifying-glass-chart",
+        title: "The Analyst",
+        text: "I'm drawn to messy data, inconsistent processes and to the patterns hiding inside them. I enjoy turning raw spreadsheets into dashboards, manual workflows into structured systems, and unreliable data into something people can trust.",
       },
       {
         icon: "fa-rocket",
@@ -26,7 +31,12 @@ export const data = {
       {
         icon: "fa-code",
         title: "O Desenvolvedor",
-        text: "Desenvolvedor Web focado em criar soluções escaláveis e interfaces performáticas. Especialista em transformar requisitos complexos em código limpo e manutenível.",
+        text: "Construo sistemas, não só interfaces, transformando processos manuais e sujeitos a erro em fluxos estruturados e confiáveis. Seja código limpo, um relatório automatizado ou um conjunto de dados bem organizado, meu foco é resolver o problema da forma certa, não só usar a ferramenta mais familiar.",
+      },
+      {
+        icon: "fa-magnifying-glass-chart",
+        title: "O Analista",
+        text: "Sou atraído por dados bagunçados, processos inconsistentes e pelos padrões escondidos neles. Gosto de transformar planilhas brutas em dashboards, fluxos manuais em sistemas estruturados e dados pouco confiáveis em algo em que as pessoas possam confiar.",
       },
       {
         icon: "fa-rocket",
