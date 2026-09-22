@@ -60,13 +60,38 @@ export const data = {
       en: {
         subtitle: "Corporate internal tooling for operational efficiency.",
         highlights: ["Node.js", "Docx Automation", "Process Optimization"],
-        text: "A production-grade suite of tools I developed for Transwolff. It automates the generation of complex accident and occurrence reports. By converting manual Word processing into structured web forms, I reduced the reporting time by ~70% and ensured data consistency across the department. Used daily by the operational team.",
+        text: "Before Lobotrans, incident and occurrence reporting at Transwolff was entirely manual — copying and pasting into Word by hand, a process prone to inconsistent formatting and, critically, forgotten fields in reports that mattered. I built this suite to put the whole workflow on rails: structured forms guide operators through every required field, images are processed and positioned automatically, and the final document is generated from a template with guaranteed consistency. An AI-assisted proofreading step reviews key narrative fields before submission. Used daily by the operational team, it cut report time by ~70% and removed most of the human error that came with the old process.",
       },
       pt: {
         subtitle:
           "Ferramentas internas corporativas para eficiência operacional.",
         highlights: ["Node.js", "Automação Docx", "Otimização de Processos"],
-        text: "Uma suíte de ferramentas em produção que desenvolvi para a Transwolff. Automatiza a geração de relatórios complexos de acidentes e ocorrências. Ao converter a edição manual de Word em formulários web estruturados, reduzi o tempo de relatório em ~70% e garanti a consistência dos dados em todo o departamento. Uso diário pela equipe operacional.",
+        text: "Antes do Lobotrans, o registro de acidentes e ocorrências na Transwolff era inteiramente manual — copiar e colar no Word à mão, um processo sujeito a formatação inconsistente e, o que é mais crítico, campos esquecidos em relatórios importantes. Criei essa suíte para colocar todo o fluxo nos trilhos: formulários estruturados guiam o operador por cada campo obrigatório, imagens são processadas e posicionadas automaticamente, e o documento final é gerado a partir de um template com consistência garantida. Uma etapa de revisão assistida por IA confere os campos narrativos antes do envio. Usado diariamente pela equipe operacional, reduziu o tempo de relatório em ~70% e eliminou boa parte dos erros humanos do processo antigo.",
+      },
+    },
+    {
+      id: "project3", // Mantém o ID para ficar na mesma posição (3º lugar)
+      highlight: true,
+      title: "Cruzadox",
+      imgCover: "project3.png",
+      icon: "crosswordIcon.png",
+      link: "https://davidbitner.github.io/palavras-cruzadas-de-encaixe/",
+      imgs: ["cruzadox1.jpg", "cruzadox2.png"],
+      color: "#2c3e50",
+      en: {
+        subtitle: "Fit-word puzzle generator with print layout.",
+        highlights: ["Greedy Algorithm", "Print CSS", "Logic & Math"],
+        text: "Built to solve a real gap: my mother couldn't find this style of fit-word puzzle to buy, so I made a generator for her. What started as a personal project became a technical challenge — a custom greedy algorithm calculates the optimal grid layout for any word list, with a print-ready CSS layout for A4 output.",
+      },
+      pt: {
+        subtitle:
+          "Gerador de palavras cruzadas de encaixe pronto para impressão.",
+        highlights: [
+          "Algoritmo Greedy",
+          "CSS de Impressão",
+          "Lógica Matemática",
+        ],
+        text: "Criado para resolver uma necessidade real: minha mãe não encontrava esse estilo de palavras cruzadas de encaixe à venda, então fiz um gerador para ela. O que começou como um projeto pessoal virou um desafio técnico — um algoritmo 'greedy' personalizado calcula o melhor encaixe de grade para qualquer lista de palavras, com layout pronto para impressão em A4.",
       },
     },
     {
@@ -116,31 +141,6 @@ export const data = {
         subtitle: "Estrutura de landing page de alta conversão.",
         highlights: ["Agile", "Splide Carousel", "Ken Burns Effect"],
         text: "Desenvolvido usando conceitos Agile (Sprints, Mapas Mentais). Apresenta animações bezier complexas criando um efeito cinematográfico Ken Burns no banner principal.",
-      },
-    },
-    {
-      id: "project3", // Mantém o ID para ficar na mesma posição (3º lugar)
-      highlight: true,
-      title: "Cruzadox",
-      imgCover: "project3.png",
-      icon: "crosswordIcon.png",
-      link: "https://davidbitner.github.io/palavras-cruzadas-de-encaixe/",
-      imgs: ["cruzadox1.jpg", "cruzadox2.png"],
-      color: "#2c3e50",
-      en: {
-        subtitle: "Fit-word puzzle generator with print layout.",
-        highlights: ["Greedy Algorithm", "Print CSS", "Logic & Math"],
-        text: "A custom tool developed to solve a market gap for specific puzzle types. Features a complex greedy algorithm to calculate the optimal grid layout for any given list of words and a specialized CSS print view for A4 paper output.",
-      },
-      pt: {
-        subtitle:
-          "Gerador de palavras cruzadas de encaixe pronto para impressão.",
-        highlights: [
-          "Algoritmo Greedy",
-          "CSS de Impressão",
-          "Lógica Matemática",
-        ],
-        text: "Ferramenta desenvolvida para suprir uma escassez de jogos específicos no mercado. Utiliza um algoritmo 'greedy' complexo para calcular o melhor encaixe de grade possível para qualquer lista de palavras e possui layout otimizado para impressão em folha A4.",
       },
     },
     {
@@ -350,14 +350,24 @@ export const data = {
     },
   ],
   skills: {
-    tech: ["JavaScript (ES6+)", "Sass / SCSS", "CSS3", "HTML5", "Python"],
+    tech: [
+      "JavaScript (ES6+)",
+      "Sass / SCSS",
+      "CSS3",
+      "HTML5",
+      "Python",
+      "SQL",
+      "Google Apps Script",
+      "VBA",
+    ],
     tools: [
       "VS Code",
       "Git & GitHub",
       "Adobe XD",
       "Photoshop",
       "Trello",
-      "Excel",
+      "Excel (Advanced)",
+      "Looker Studio",
     ],
     soft: {
       en: [
