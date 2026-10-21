@@ -105,6 +105,31 @@ export const data = {
       },
     },
     {
+      id: "project-pulse",
+      highlight: true,
+      title: "Pulse",
+      imgCover: "projects/pulse.jpg",
+      icon: "pulseIcon.svg",
+      link: "https://davidbitner.github.io/weight/",
+      imgs: ["pulse1.jpg", "pulse2.jpg", "pulse3.jpg"],
+      color: "#0e2a2f",
+      en: {
+        subtitle: "Personal dashboard that turns raw logs into trends.",
+        highlights: ["Data Visualization", "Custom Charts", "Import & Backup"],
+        text: "A personal dashboard I built to turn daily workout and weight logs into something readable. A short form captures each day, and the app calculates comparisons against yesterday, last week, last month and the starting point, a 7-entry moving average, goal progress, weekly volume, records and streaks. Every chart, including a GitHub-style consistency calendar, is built by hand with no charting library. Data stays in the browser, with JSON backup and import.",
+      },
+      pt: {
+        subtitle:
+          "Dashboard pessoal que transforma registros brutos em tendências.",
+        highlights: [
+          "Visualização de Dados",
+          "Gráficos Próprios",
+          "Importação e Backup",
+        ],
+        text: "Um dashboard pessoal que criei para transformar registros diários de treino e peso em algo legível. Um formulário curto registra cada dia, e o app calcula comparações com ontem, a semana passada, o mês passado e o ponto de partida, uma média móvel de 7 registros, progresso da meta, volume semanal, recordes e sequências. Todos os gráficos, incluindo um calendário de consistência no estilo do GitHub, são feitos à mão, sem biblioteca de gráficos. Os dados ficam no navegador, com backup e importação em JSON.",
+      },
+    },
+    {
       id: "project1",
       highlight: true,
       title: "30 Projects",
@@ -218,6 +243,13 @@ export const data = {
     },
 
     // --- OUTROS PROJETOS (Modal) ---
+    {
+      id: "other-percentages",
+      highlight: false,
+      title: "Percentages",
+      link: "https://davidbitner.github.io/percentages/",
+      imgCover: "projects/percentages.jpg",
+    },
     {
       id: "other-bcc",
       highlight: false,
